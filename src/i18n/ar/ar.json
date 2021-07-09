@@ -1,7 +1,6 @@
 {
-    "title": "arabic",
-    "description": {
-      "part1": "To get started, edit <1>src/App.js</1> and save to reload.",
-      "part2": "Switch language between english and german using buttons above."
-    }
-  }
+  "title": "الصفحة الرئيسية",
+  "title2": "الصفحة الثانية",
+  "home": "الصفحة الرئيسية",
+  "page2": "الصفحة الثانية"
+}

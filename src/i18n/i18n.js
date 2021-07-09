@@ -24,8 +24,7 @@ i18n
     fallbackLng: 'ar',
     debug: true,
     resources,
-    lng: "ar",
-    interpolation: {
+     interpolation: {
       escapeValue: false, 
     },
     react: {

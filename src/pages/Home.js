@@ -1,12 +1,10 @@
 import React from 'react'
 import { useTranslation, withTranslation, Trans } from 'react-i18next';
+import Layout from '../components/layout';
 
 
 const Home = () => {
     const { t, i18n } = useTranslation();
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng);
-    };
 
 
 
@@ -14,17 +12,13 @@ const Home = () => {
 
 
     return (
-        <h1>
-            <div className="App">
-                <h2>{t('title')}</h2>
-            </div>
-            <button type="button" onClick={() => changeLanguage('de')}>
-          de
-        </button>
-        <button type="button" onClick={() => changeLanguage('en')}>
-          en
-        </button>
-        </h1>
+        <Layout>
+            <>
+                <div className="App">
+                    <h2>{t('title')}</h2>
+                </div>
+            </>
+        </Layout>
     )
 }
 export default Home
