@@ -6,9 +6,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 
 import translationsEN from './en/en.json'
 import translationsAR from './ar/ar.json'
-// don't want to use this?
-// have a look at the Quick start guide 
-// for passing in lng and translations on init
+ 
 
 const resources = {
   ar: { translation: translationsAR },
@@ -21,14 +19,14 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: ["ar", "en"],
+    fallbackLng: ["en-US","ar", "en"],
     debug: false,
     resources,
     interpolation: {
       escapeValue: false,
     },
     react: {
-      useSuspense: false //   <---- this will do the magic
+      useSuspense: false  
     }
   });
 

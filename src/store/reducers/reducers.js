@@ -1,16 +1,35 @@
-const authReducer = (state = {}, action) => {
+
+
+var localdata = localStorage.getItem("store")
+localdata = JSON.parse(localdata)
+const initialState = localdata ? localdata : {
+    total: 0
+}
+const countReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'SET_LOGIN':
-            return {...state, isLoggedin: true, user: action.payload.user, token: action.payload.access_token};
-        case 'LOGOUT':
-            localStorage.removeItem('state')
-            return {...state, isLoggedin: false, user: {}, token: ''};
-        case 'UPDATE_USER':
-            return {...state, user: action.payload.user};
-        case 'CHANGE_USER_STATUS':
-            return {...state, user: action.payload.user};
+        case "ADD": {
+            localStorage.setItem("store", JSON.stringify({
+                ...state,
+                total: state.total + 1
+            }))
+            return {
+                ...state,
+                total: state.total + 1
+            };
+        }
+        case "REMOVE": {
+            localStorage.setItem("store", JSON.stringify({
+                ...state,
+                total: state.total + 1
+            }))
+            return {
+                ...state,
+                total: state.total - 1
+            };
+        }
         default:
             return state;
     }
+
 };
-export default authReducer;
+export default countReducer;

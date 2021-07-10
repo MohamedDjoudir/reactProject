@@ -20,7 +20,7 @@ const AppRouter = () => {
           <Route exact path='/' component={HomePage} />
           <Route exact path='/page2' component={Page2} />
           <Route>
-            <div>not found</div>
+            <div> 404 not found</div>
           </Route>
 
         </Switch>

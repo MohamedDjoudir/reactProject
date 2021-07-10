@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useTranslation, withTranslation, Trans } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
 
 
@@ -75,6 +75,8 @@ export default function ButtonAppBar() {
         },
         btn: {
             textTransform: 'none',
+            cursor: "pointer",
+
             "&:hover": {
                 background: "none",
             },
@@ -112,6 +114,7 @@ export default function ButtonAppBar() {
         },
         menuBtn: {
             fontSize: "35px",
+            cursor: "pointer"
         },
     });
     const classes = useStyles();
@@ -119,10 +122,8 @@ export default function ButtonAppBar() {
 
     //LanguageSwitcher
     const LanguageSwitcher = () => {
-        console.log(i18n)
-        return i18n.language !== "ar" ? i18n.changeLanguage('ar') : i18n.changeLanguage('en');
+         return i18n.language !== "ar" ? i18n.changeLanguage('ar') : i18n.changeLanguage('en');
     }
-
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar className={classes.AppBar} position="fixed">
@@ -141,7 +142,9 @@ export default function ButtonAppBar() {
                         <Button className={classes.btn} disableRipple> <Link to={"/page2"} className={classes.link}>{t("howItWork")}</Link></Button>
                         <Button className={classes.btn} disableRipple> <Link to={"/page2"} className={classes.link}>{t("signUp")}</Link></Button>
                         <Button className={classes.btn} disableRipple> <Link to={"/page2"} className={classes.link}>{t("signIn")}</Link></Button>
-                        <Button onClick={LanguageSwitcher} className={classes.btn} disableRipple >{i18n.languages[1] === "ar" ? "العربية" : "English"}</Button>
+
+
+                        <Button onClick={LanguageSwitcher} className={classes.btn}  >{i18n.languages[2] === "ar" ? "العربية" : "English"}</Button>
                     </Box>}
                     {(isMobile) && <Box className={classes.menu}>
                         <List>
@@ -151,7 +154,7 @@ export default function ButtonAppBar() {
                             <ListItem className={classes.btn} > <Link to={"/page2"} className={classes.link}>{t("signUp")}</Link></ListItem>
                             <ListItem className={classes.btn} > <Link to={"/page2"} className={classes.link}>{t("signIn")}</Link></ListItem>
                             <Divider />
-                            <ListItem onClick={LanguageSwitcher} className={classes.btn}  >{i18n.languages[1] === "ar" ? "العربية" : "English"}</ListItem>
+                            <ListItem onClick={LanguageSwitcher} className={classes.btn}  >{i18n.languages[2] === "ar" ? "العربية" : "English"}</ListItem>
                         </List>
                     </Box>}
                     {(isMobile) && <Box className={classes.menuBG} onClick={() => setMenu(!menu)} />}

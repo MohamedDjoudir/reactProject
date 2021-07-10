@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 *,
 :after,
 :before {
@@ -16,7 +16,6 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   background: #fcfcfc;
-
 }
 .MuiToolbar-regular {
   min-height: 56px !important;
@@ -142,23 +141,31 @@ body {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #b3b3b3;
+  background: #fcfcfc;
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #666666;
+  background: #85ddf8;
   border-radius: 2px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #353534;
+  background: #6bb7ce;
 }
 ::selection {
   color: rgba(0, 0, 0, 0.712);
   background: #014b5898;
 }
 
+.SwiperWrapper {
+  padding: 2rem 3rem !important;
+  max-width: 1365px;
+}
 @media only screen and (max-width: 900px) {
+  .SwiperWrapper {
+    padding: 0 !important;
+    max-width: 1365px;
+  }
   .body-header-section {
     width: 100%;
     display: flex;
@@ -185,7 +192,7 @@ body {
     max-width: 612px;
   }
   .text-wraper-title {
-    font-family: "DM Sans" ,sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-size: 24px;
     font-weight: 400;
 
@@ -219,7 +226,6 @@ body {
     -ms-transform: translate(-50%, -50%);
     text-align: center;
   }
-
 }
 @keyframes changeBGcolor {
   0% {
@@ -254,4 +260,21 @@ body {
   100% {
     background-image: url(./assets/home-assets/top-02.png);
   }
+}
+.freelancer {
+  height: 134px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+}
+.Mui-selected div {
+  background-color: rgba(7, 26, 197, 0) !important;
+}
+.Mui-focused div {
+  background-color: rgba(7, 26, 197, 0) !important;
+}
+.Mui-expanded div {
+  background-color: rgba(7, 26, 197, 0) !important;
 }

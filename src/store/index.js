@@ -1,16 +1,8 @@
-import {createStore} from 'redux';
-import rootReducer from './reducers';
+import { createStore } from 'redux';
+import countReducer from './reducers/reducers';
 
 
-const initialState = {
-    auth: {
-        isLoggedin: false,
-        token: '',
-        user: {}
-    }
-}
 
-let persistedState = LoadFromLocalStorge();
-const store = createStore(rootReducer, initialState);
-store.subscribe(() => saveToLocalStorge(store.getState()))
+
+const store = createStore(countReducer);
 export default store;
