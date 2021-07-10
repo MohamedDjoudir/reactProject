@@ -21,11 +21,11 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'ar',
-    debug: true,
+    fallbackLng: ["ar", "en"],
+    debug: false,
     resources,
-     interpolation: {
-      escapeValue: false, 
+    interpolation: {
+      escapeValue: false,
     },
     react: {
       useSuspense: false //   <---- this will do the magic
