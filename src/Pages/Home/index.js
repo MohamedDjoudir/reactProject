@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { useTranslation } from 'react-i18next';
 import Layout from '../../components/layout';
 import server_api from '../../components/server_api';
-import Footer from "../../components/footer";
 import { connect } from 'react-redux';
 import Seo from '../../components/Seo'
 import TopSection from './components/TopSection'
@@ -18,17 +16,12 @@ import FindTheRightPerson from './components/FindTheRightPers'
 import SwiperCore, { Autoplay, Navigation } from 'swiper';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
-
-
 // M_UI component s
-
-
 const Home = () => {
     // componnet states
     const [categories, setCategories] = useState(null)
     const [services, setServices] = useState(null)
     const [freelancers, setFreelancers] = useState(null)
-
     // componnet did mount
     useEffect(() => {
         // swiiper api 
@@ -48,7 +41,6 @@ const Home = () => {
         fetchData()
     }, [])
     // language
-
     return (
         <Layout>
             <Seo title='Forlanso' />

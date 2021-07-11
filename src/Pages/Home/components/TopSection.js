@@ -1,6 +1,5 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
-
 // mui
 import InputLabel from '@material-ui/core/InputLabel';
 import InputBase from '@material-ui/core/InputBase';
@@ -8,10 +7,8 @@ import InputAdornment from '@material-ui/core/InputAdornment';
 import SearchIcon from '@material-ui/icons/Search';
 import Chip from '@material-ui/core/Chip';
 import { makeStyles } from '@material-ui/core/styles';
-
 const TopSection = () => {
     const { t, i18n } = useTranslation();
-
     //styling
     const useStyles = makeStyles(theme => ({
         inputFocused: {
@@ -21,7 +18,6 @@ const TopSection = () => {
             color: '#4d4d4f',
             width: '100%',
             lineHeight: "38px",
-
             minHeight: "50px",
             maxHeight: "66px",
             fontFamily: "'Almarai',sans-serif",
@@ -29,8 +25,6 @@ const TopSection = () => {
             [theme.breakpoints.down('sm')]: {
                 height: "50px",
             },
-
-
         },
         inputInput: {
             // vertical padding + font size from searchIcon
@@ -80,7 +74,6 @@ const TopSection = () => {
         },
     }))
     const classes = useStyles();
-
     return (
         <section>
             <div className="body-header-section" >
@@ -98,7 +91,6 @@ const TopSection = () => {
                     }}>
                         {t('ForlansoDesc')}
                     </div>
-
                     <InputLabel htmlFor="search" style={{
                         color: "#ffffde", fontFamily: '"Almarai", sans-serif', margin: "7px 0", fontSize: "14px"
                     }}>
@@ -132,5 +124,4 @@ const TopSection = () => {
         </section>
     )
 }
-
 export default TopSection

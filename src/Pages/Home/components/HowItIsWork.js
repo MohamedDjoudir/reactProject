@@ -1,5 +1,4 @@
 import React from 'react'
-
 // importing assets 
 import searchIcon from "../../../assets/home-assets/find-seller.svg"
 import bag from "../../../assets/home-assets/bag.svg"
@@ -10,15 +9,10 @@ import { useTranslation } from 'react-i18next';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
-
-
 // mui
-
 import { makeStyles } from '@material-ui/core/styles';
-
 const HowItIsWork = ({ categories }) => {
     const { t, i18n } = useTranslation();
-
     //styling
     const useStyles = makeStyles(theme => ({
         featuresText: {
@@ -31,7 +25,6 @@ const HowItIsWork = ({ categories }) => {
             [theme.breakpoints.down('')]: {
                 maxHeight: "",
                 textAlign: i18n.language === 'ar' ? "right" : "left",
-
             },
         },
         howItWorkItemWraper: {
@@ -41,7 +34,6 @@ const HowItIsWork = ({ categories }) => {
             [theme.breakpoints.down('xs')]: {
                 display: "block",
             },
-
         },
         howItWorkWrapper: {
             background: "#e6f7fd",
@@ -56,7 +48,6 @@ const HowItIsWork = ({ categories }) => {
             [theme.breakpoints.down('xs')]: {
                 fontSize: "23px",
                 textAlign: i18n.language === 'ar' ? "right" : "left",
-
             },
         },
         howItWorkItemIcon: {
@@ -78,23 +69,16 @@ const HowItIsWork = ({ categories }) => {
             textAlign: 'center',
             [theme.breakpoints.down('md')]: {
                 textAlign: i18n.language === 'ar' ? "right" : "left",
-
             },
-
         },
-
         howItWorkItemWrapper: {
             flexDirection: "column",
             [theme.breakpoints.down('md')]: {
                 flexDirection: "",
-
             },
         },
-
-
     }))
     const classes = useStyles();
-
     return (
         <>
             <div className={classes.howItWorkWrapper} >
@@ -143,5 +127,4 @@ const HowItIsWork = ({ categories }) => {
         </>
     )
 }
-
 export default HowItIsWork

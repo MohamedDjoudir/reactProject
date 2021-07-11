@@ -4,10 +4,7 @@ import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles
 import green from '@material-ui/core/colors/green';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 import Footer from "./footer"
-
-
 import Header from './header'
-
 const Layout = ({ children }) => {
     const [effect, setEffect] = useState(false)
     useEffect(() => {
@@ -15,7 +12,6 @@ const Layout = ({ children }) => {
             setEffect(true)
         }, 30);
     }, [])
-
     const useStyles = makeStyles({
         root: {
             transition: "all 300ms",
@@ -31,7 +27,6 @@ const Layout = ({ children }) => {
             bottom: "6vh",
             right: "5vw",
             zIndex:"5556",
-
         },
         WhatsAppIcon: {
             fontSize: "clamp(3.5rem,calc(1.5rem + 3vw),4rem)",
@@ -47,7 +42,6 @@ const Layout = ({ children }) => {
     }, [])
     const {  i18n } = useTranslation();
     document.body.dir = i18n.dir();
-
     const theme = createTheme({
         palette: {
             primary: {
@@ -59,8 +53,6 @@ const Layout = ({ children }) => {
         },
     });
     const classes = useStyles();
-
-
     return (
         <div >
             <ThemeProvider theme={theme}>
@@ -73,12 +65,9 @@ const Layout = ({ children }) => {
                         </a>
                     </div>
                     <Footer />
-
-
                 </div>
             </ThemeProvider>
         </div>
-
     )
 }
 export default Layout

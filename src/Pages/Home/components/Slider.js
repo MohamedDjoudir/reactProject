@@ -1,14 +1,10 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
 // mui
-
 import { makeStyles } from '@material-ui/core/styles';
-
 const Slider = ({ categories }) => {
     const { t, i18n } = useTranslation();
-
     //styling
     const useStyles = makeStyles(theme => ({
         categories: {
@@ -34,7 +30,6 @@ const Slider = ({ categories }) => {
         },
     }))
     const classes = useStyles();
-
     return (
         <>
             <div className={classes.sliderWrapper}>
@@ -73,5 +68,4 @@ const Slider = ({ categories }) => {
         </>
     )
 }
-
 export default Slider

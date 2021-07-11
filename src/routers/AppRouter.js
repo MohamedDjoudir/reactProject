@@ -2,14 +2,9 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './../i18n/i18n';
-
-
-
-
 //pages
 import HomePage from '../Pages/Home';
 import Page2 from '../Pages/Page2';
-
 const AppRouter = () => {
   
   return (
@@ -22,10 +17,8 @@ const AppRouter = () => {
           <Route>
             <div> 404 not found</div>
           </Route>
-
         </Switch>
       </I18nextProvider>
-
     </>
   )
 }

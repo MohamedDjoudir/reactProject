@@ -1,19 +1,12 @@
 import React from 'react'
 import FreeLancerCard from "./freelancer_card";
 import { useTranslation } from 'react-i18next';
-
 // importing assets 
-
-
-
 // mui
 import Grid from '@material-ui/core/Grid';
-
 import { makeStyles } from '@material-ui/core/styles';
-
 const MeetFreelancers = ({ freelancers }) => {
     const { t, i18n } = useTranslation();
-
     //styling
     const useStyles = makeStyles(theme => ({
         servicesWrapper: {
@@ -46,9 +39,7 @@ const MeetFreelancers = ({ freelancers }) => {
                 margin: "35px auto 0 auto",
                 width: "100%",
                 maxWidth: "1400px"
-
             },
-
         },
         howItWorkItemTitle: {
             width: "max-content",
@@ -59,12 +50,10 @@ const MeetFreelancers = ({ freelancers }) => {
             [theme.breakpoints.down('xs')]: {
                 fontSize: "23px",
                 textAlign: i18n.language === 'ar' ? "right" : "left",
-
             },
         },
     }))
     const classes = useStyles();
-
     return (
         <>
             <div className={classes.howItWorkWrapper} >
@@ -86,5 +75,4 @@ const MeetFreelancers = ({ freelancers }) => {
         </>
     )
 }
-
 export default MeetFreelancers

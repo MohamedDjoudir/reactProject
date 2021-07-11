@@ -1,7 +1,5 @@
 import React from 'react'
 import BtnDiscoverAllCat from './Btn_DiscoverAllCat'
-
-
 //mui
 import { useTranslation } from 'react-i18next';
 import ListItem from '@material-ui/core/ListItem';
@@ -9,15 +7,10 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import ListItemText from '@material-ui/core/ListItemText';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import Avatar from '@material-ui/core/Avatar';
-
-
 // mui
-
 import { makeStyles } from '@material-ui/core/styles';
-
 const BayerFreelancer = ({ categories }) => {
     const { t, i18n } = useTranslation();
-
     //styling
     const useStyles = makeStyles(theme => ({
         featuresText: {
@@ -29,9 +22,7 @@ const BayerFreelancer = ({ categories }) => {
             textAlign: i18n.language === 'ar' ? "right" : "left",
             [theme.breakpoints.down('sm')]: {
                 maxHeight: "",
-
             },
-
         },
         bayerFreelancerWrapper: {
             display: "flex",
@@ -52,7 +43,6 @@ const BayerFreelancer = ({ categories }) => {
             width: "100%",
             display: "flex",
             justifyContent: "space-between",
-
         },
         features: {
             margin: "2rem auto 1rem",
@@ -75,17 +65,13 @@ const BayerFreelancer = ({ categories }) => {
             [theme.breakpoints.down('sm')]: {
                 margin: "0 auto",
                 width: "90vw",
-
             },
         },
         sign_up_like_freelanser: {
             width: "100%",
-
-
         },
     }))
     const classes = useStyles();
-
     return (
         <>
             <div className={classes.bayerFreelancerWrapper2}>
@@ -181,5 +167,4 @@ const BayerFreelancer = ({ categories }) => {
         </>
     )
 }
-
 export default BayerFreelancer

@@ -1,22 +1,13 @@
 import React from 'react'
-import ServiceCard from "./servic_card";
 import { useTranslation } from 'react-i18next';
-
 // importing assets 
-
-
-
 // mui
 import Button from '@material-ui/core/Button';
-
 import { makeStyles } from '@material-ui/core/styles';
-
 const FindTheRightPerson = ({ services }) => {
-    const { t, i18n } = useTranslation();
-
+    const { t } = useTranslation();
     //styling
     const useStyles = makeStyles(theme => ({
-
         green_circle: {
             height: "100%",
             width: "100%",
@@ -41,7 +32,6 @@ const FindTheRightPerson = ({ services }) => {
             position: "absolute",
             bottom: "0",
             right: "0",
-
         },
         green_circle2: {
             height: "100%",
@@ -106,9 +96,7 @@ const FindTheRightPerson = ({ services }) => {
             fontSize: "30px",
             fontFamily: "'Almarai',sans-serif",
             position: "relative",
-
         },
-
         viewBTN: {
             background: "#65c042",
             color: "#fff",
@@ -122,7 +110,6 @@ const FindTheRightPerson = ({ services }) => {
         }
     }))
     const classes = useStyles();
-
     return (
         <>
             <div className={classes.Find_the_right_person}>
@@ -152,5 +139,4 @@ const FindTheRightPerson = ({ services }) => {
         </>
     )
 }
-
 export default FindTheRightPerson

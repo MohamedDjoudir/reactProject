@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from "react-router-dom";
-
-
-
-
 // M_UI component s
 import { makeStyles } from '@material-ui/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -15,14 +11,12 @@ import Button from '@material-ui/core/Button';
 import MenuIcon from '@material-ui/icons/Menu';
 import ListItem from '@material-ui/core/ListItem';
 import List from '@material-ui/core/List';
-
 // assets
 import Logo from '../assets/logo/logo.png'
 export default function ButtonAppBar() {
     // component states
     const [isMobile, setIsMobile] = useState(false)
     const [menu, setMenu] = useState(false)
-
     // mobile screen detecter
     const handleResize = () => {
         if (window.innerWidth < 767) {
@@ -71,12 +65,10 @@ export default function ButtonAppBar() {
             color: "#4d4d4f",
             textDecorationLine: "none",
             fontFamily: "'Almarai',sans-serif",
-
         },
         btn: {
             textTransform: 'none',
             cursor: "pointer",
-
             "&:hover": {
                 background: "none",
             },
@@ -97,8 +89,6 @@ export default function ButtonAppBar() {
             flexDirection: "column",
             alignItems: "flex-start",
             padding: "80px 20px 0"
-
-
         },
         menuBG: {
             transition: "all 700ms cubic-bezier(0.16, 1, 0.3, 1)",
@@ -110,7 +100,6 @@ export default function ButtonAppBar() {
             top: "0",
             right: menu ? "0" : '-200%',
             zIndex: "-10"
-
         },
         menuBtn: {
             fontSize: "35px",
@@ -119,7 +108,6 @@ export default function ButtonAppBar() {
     });
     const classes = useStyles();
     const { t, i18n } = useTranslation();
-
     //LanguageSwitcher
     const LanguageSwitcher = () => {
          return i18n.language !== "ar" ? i18n.changeLanguage('ar') : i18n.changeLanguage('en');
@@ -128,8 +116,6 @@ export default function ButtonAppBar() {
         <Box sx={{ flexGrow: 1 }}>
             <AppBar className={classes.AppBar} position="fixed">
                 <Toolbar className={classes.Toolbar}>
-
-
                     <Box sx={{ flexGrow: 1 }} className={classes.logoWrapper}>
                         <Link to={"/"} >
                             <img src={Logo} alt="Forlanso" className={classes.logo} />
@@ -142,8 +128,6 @@ export default function ButtonAppBar() {
                         <Button className={classes.btn} disableRipple> <Link to={"/page2"} className={classes.link}>{t("howItWork")}</Link></Button>
                         <Button className={classes.btn} disableRipple> <Link to={"/page2"} className={classes.link}>{t("signUp")}</Link></Button>
                         <Button className={classes.btn} disableRipple> <Link to={"/page2"} className={classes.link}>{t("signIn")}</Link></Button>
-
-
                         <Button onClick={LanguageSwitcher} className={classes.btn}  >{i18n.languages[2] === "ar" ? "العربية" : "English"}</Button>
                     </Box>}
                     {(isMobile) && <Box className={classes.menu}>
@@ -158,9 +142,7 @@ export default function ButtonAppBar() {
                         </List>
                     </Box>}
                     {(isMobile) && <Box className={classes.menuBG} onClick={() => setMenu(!menu)} />}
-
                     {isMobile && <div><MenuIcon className={classes.menuBtn} onClick={() => setMenu(!menu)} /> </div>}
-
                 </Toolbar>
             </AppBar>
             <div className={classes.AppBarSpace} />

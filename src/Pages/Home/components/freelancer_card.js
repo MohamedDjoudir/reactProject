@@ -7,7 +7,6 @@ import { useTranslation } from 'react-i18next';
 import Grid from '@material-ui/core/Grid';
 import Zoom from '@material-ui/core/Zoom';
 import Paper from '@material-ui/core/Paper';
-
 import { makeStyles } from '@material-ui/core/styles';
 const FreelancerCard = ({ freelancer, index }) => {
     // language
@@ -41,7 +40,6 @@ const FreelancerCard = ({ freelancer, index }) => {
             fontFamily: "'Cairo',sans-serif",
             fontSize: "18px",
             margin: "23px auto 0",
-
             height: "135px",
             overflow: "hidden",
             lineHeight: "19px"
@@ -56,10 +54,8 @@ const FreelancerCard = ({ freelancer, index }) => {
             paddingBottom: "10px",
             "&:hover": {
                 background: "#92d878",
-
             }
         }
-
     }))
     const classes = useStyles();
     return (

@@ -14,12 +14,9 @@ import Avatar from '@material-ui/core/Avatar';
 import Divider from '@material-ui/core/Divider';
 import { makeStyles } from '@material-ui/core/styles';
 import { FaStar } from 'react-icons/fa';
-
-
 const ServiceCard = ({ service, index }) => {
     // language
     const { t, i18n } = useTranslation();
-
     //mui styling 
     const useStyles = makeStyles(theme => ({
         user_name: {
@@ -32,11 +29,6 @@ const ServiceCard = ({ service, index }) => {
             fontWeight: "400",
             width: "100%",
             whiteSpace: "nowrap",
-
-
-
-
-
         },
         user_name_job: {
             fontSize: "10px",
@@ -49,7 +41,6 @@ const ServiceCard = ({ service, index }) => {
             minHeight: "20px",
             maxHeight: "20px",
             height: "20px"
-
         },
         CardContent: {
             padding: "10px",
@@ -95,18 +86,13 @@ const ServiceCard = ({ service, index }) => {
             paddingBottom: "10px",
             "&:hover": {
                 background: "#92d878",
-
             }
-
         }
-
     }))
     const classes = useStyles();
-
     return (
         <Zoom style={{ transitionDelay: `${1 * index}0ms` }} in={true}>
             <Paper style={{ padding: "20px 10px", margin: '0px 0px', background: "transparent" }} elevation={0} >
-
                 <Grid >
                     <Card sx={{ maxWidth: 345 }} style={{
                         boxShadow: "0 0 10px rgba(150,150,150,0.5)",
@@ -143,7 +129,6 @@ const ServiceCard = ({ service, index }) => {
                                 </div>
                                 <br />
                                 <Divider />
-
                             </CardContent>
                         </CardActionArea>
                         <CardActions>
@@ -155,7 +140,6 @@ const ServiceCard = ({ service, index }) => {
                 </Grid>
             </Paper>
         </Zoom>
-
     );
 }
 export default ServiceCard

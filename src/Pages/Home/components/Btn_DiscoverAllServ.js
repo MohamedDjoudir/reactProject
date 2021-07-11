@@ -1,14 +1,10 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
 import Button from '@material-ui/core/Button';
-
 // mui
-
 import { makeStyles } from '@material-ui/core/styles';
-
 const Btn_DiscoverAllServ = ({ categories }) => {
     const { t} = useTranslation();
-
     //styling
     const useStyles = makeStyles(theme => ({
         categories: {
@@ -31,7 +27,6 @@ const Btn_DiscoverAllServ = ({ categories }) => {
         },
     }))
     const classes = useStyles();
-
     return (
         <>
             <div style={{ textAlign: "center" }}>
@@ -42,5 +37,4 @@ const Btn_DiscoverAllServ = ({ categories }) => {
         </>
     )
 }
-
 export default Btn_DiscoverAllServ
