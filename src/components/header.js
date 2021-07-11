@@ -46,7 +46,8 @@ export default function ButtonAppBar() {
             height: "80px",
             width: "100%",
             maxWidth: "1400px",
-            margin: "0 auto"
+            margin: "0 auto",
+            padding:"0 35px 0 25px !important"
         },
         grow: {
             flexGrow: 1,
@@ -66,8 +67,13 @@ export default function ButtonAppBar() {
             textDecorationLine: "none",
             fontFamily: "'Almarai',sans-serif",
         },
+        btnVide: {
+            opacity: "0",
+            minWidth:"4vw"
+        },
         btn: {
             textTransform: 'none',
+            margin: "5px",
             cursor: "pointer",
             "&:hover": {
                 background: "none",
@@ -110,7 +116,7 @@ export default function ButtonAppBar() {
     const { t, i18n } = useTranslation();
     //LanguageSwitcher
     const LanguageSwitcher = () => {
-         return i18n.language !== "ar" ? i18n.changeLanguage('ar') : i18n.changeLanguage('en');
+        return i18n.language !== "ar" ? i18n.changeLanguage('ar') : i18n.changeLanguage('en');
     }
     return (
         <Box sx={{ flexGrow: 1 }}>
@@ -128,7 +134,8 @@ export default function ButtonAppBar() {
                         <Button className={classes.btn} disableRipple> <Link to={"/page2"} className={classes.link}>{t("howItWork")}</Link></Button>
                         <Button className={classes.btn} disableRipple> <Link to={"/page2"} className={classes.link}>{t("signUp")}</Link></Button>
                         <Button className={classes.btn} disableRipple> <Link to={"/page2"} className={classes.link}>{t("signIn")}</Link></Button>
-                        <Button onClick={LanguageSwitcher} className={classes.btn}  >{i18n.languages[2] === "ar" ? "العربية" : "English"}</Button>
+                        <Button className={classes.btnVide} disableRipple> </Button>
+                        <Button onClick={LanguageSwitcher} className={classes.btn}   ><div className={classes.link}>{i18n.languages[2] === "ar" ? "العربية" : "English"} </div></Button>
                     </Box>}
                     {(isMobile) && <Box className={classes.menu}>
                         <List>
@@ -138,7 +145,7 @@ export default function ButtonAppBar() {
                             <ListItem className={classes.btn} > <Link to={"/page2"} className={classes.link}>{t("signUp")}</Link></ListItem>
                             <ListItem className={classes.btn} > <Link to={"/page2"} className={classes.link}>{t("signIn")}</Link></ListItem>
                             <Divider />
-                            <ListItem onClick={LanguageSwitcher} className={classes.btn}  >{i18n.languages[2] === "ar" ? "العربية" : "English"}</ListItem>
+                            <ListItem onClick={LanguageSwitcher} className={classes.btn}  ><div className={classes.link}>{i18n.languages[2] === "ar" ? "العربية" : "English"} </div></ListItem>
                         </List>
                     </Box>}
                     {(isMobile) && <Box className={classes.menuBG} onClick={() => setMenu(!menu)} />}

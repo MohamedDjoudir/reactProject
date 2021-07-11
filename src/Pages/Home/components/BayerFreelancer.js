@@ -33,6 +33,7 @@ const BayerFreelancer = ({ categories }) => {
             borderRadius: "1px",
             width: "100%",
             [theme.breakpoints.down('sm')]: {
+                margin: "0",
                 display: "block",
                 alignItems: "",
                 justifyContent: "",

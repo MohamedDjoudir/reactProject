@@ -35,7 +35,7 @@
   "money_desc": "Forlanso holds the funds you pay until the work is completed & approved by you",
   "receive": "Receive your delivery",
   "receive_desc": "Contact the seller directly within Forlanso until receiving your complete order",
-  "sold": "Sold",
+  "sold": "Sold", 
   "view": "View",
   "discover_all_services": "Discover all services",
   "meet_qualified": "Meet qualified freelancers",
@@ -54,8 +54,7 @@
   "Publishing_Content": "Publishing & Content",
   "Legal": "Legal",
   "Privacy_policy": "Privacy policy",
-  "add_1": "Add 1",
-  "remove_1": "Rem 1",
-  "redux_testing": "redux testing ( you can find it at the Footer of Home page )"
+   "Terms_Conditions": "TermsConditions"
+    
   
 }
