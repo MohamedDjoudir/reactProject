@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { createTheme, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import green from '@material-ui/core/colors/green';
 import WhatsAppIcon from '@material-ui/icons/WhatsApp';
+import Footer from "./footer"
 
 
 import Header from './header'
@@ -21,7 +22,7 @@ const Layout = ({ children }) => {
             opacity: effect ? "1" : "0",
             maxWidth: "1400px",
             margin: "0 auto",
-            background: "#fcfcfc",
+            background: "#fff",
             width:"100vw",
             overflow:"hidden"
         },
@@ -71,6 +72,8 @@ const Layout = ({ children }) => {
                             <WhatsAppIcon className={classes.WhatsAppIcon} />
                         </a>
                     </div>
+                    <Footer />
+
 
                 </div>
             </ThemeProvider>

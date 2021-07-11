@@ -160,7 +160,7 @@ export default function Footer() {
                         onNodeToggle={handleToggle}
                     >
                         <TreeItem nodeId="241" label={<div className={classes.label}  > {t('Company')}</div>} >
-                            <TreeItem nodeId="2" label={<div className={classes.TreeitemForn} >{t('About_Forlanso')}</div>} style={{
+                            <TreeItem nodeId="2" label={<div className={classes.TreeitemForn} >{t('About_Forlanso')}</div>} className={classes.Treeitem} style={{
                                 marginTop: "15px",
                             }} />
                             <TreeItem nodeId="3" label={<div className={classes.TreeitemForn}  >{t('How_it_works')}</div>} className={classes.Treeitem} />

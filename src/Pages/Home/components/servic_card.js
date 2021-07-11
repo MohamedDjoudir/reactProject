@@ -26,6 +26,7 @@ const ServiceCard = ({ service, index }) => {
             fontSize: "15px",
             color: "#303030",
             fontFamily: "'Almarai',sans-serif",
+            lineHeight:"30px",
             textAlign: i18n.language === 'ar' ? "right" : "left",
             overflow: "Hidden",
             fontWeight: "400",

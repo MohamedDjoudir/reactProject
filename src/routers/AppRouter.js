@@ -7,8 +7,8 @@ import i18n from './../i18n/i18n';
 
 
 //pages
-import HomePage from '../pages/Home';
-import Page2 from '../pages/Page2';
+import HomePage from '../Pages/Home';
+import Page2 from '../Pages/Page2';
 
 const AppRouter = () => {
   
