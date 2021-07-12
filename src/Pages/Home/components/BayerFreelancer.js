@@ -24,6 +24,18 @@ const BayerFreelancer = ({ categories }) => {
                 maxHeight: "",
             },
         },
+        ListItem: {
+            [theme.breakpoints.down('sm')]: {
+                width: "max-content",
+                paddingRight: "0px !important",
+                paddingLeft: "0px !important"
+            },
+            [theme.breakpoints.down('xs')]: {
+                width: "90%",
+                paddingRight: "0px !important",
+                paddingLeft: "0px !important"
+            },
+        },
         bayerFreelancerWrapper: {
             display: "flex",
             alignItems: "flex-start",
@@ -56,6 +68,16 @@ const BayerFreelancer = ({ categories }) => {
             [theme.breakpoints.down('sm')]: {
                 display: "block",
                 justifyContent: "",
+                margin: "1rem 7rem 0rem",
+                height: "max-content",
+
+            },
+            [theme.breakpoints.down('xs')]: {
+                display: "block",
+                justifyContent: "",
+                margin: "1rem 1rem 0rem",
+                height: "max-content",
+
             },
         },
         sign_up_like_freelanser_imgWrapper: {
@@ -80,7 +102,7 @@ const BayerFreelancer = ({ categories }) => {
                     {/* bayer */}
                     <div >
                         <div className={classes.features}>
-                            <ListItem>
+                            <ListItem className={classes.ListItem}>
                                 <ListItemAvatar>
                                     <Avatar style={{ background: "transparent", marginTop: "-20px" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
@@ -90,7 +112,7 @@ const BayerFreelancer = ({ categories }) => {
                                     primary={<div className={classes.featuresText}>{t('dedicated')}</div>}
                                 />
                             </ListItem>
-                            <ListItem>
+                            <ListItem className={classes.ListItem}>
                                 <ListItemAvatar>
                                     <Avatar style={{ background: "transparent", marginTop: "-20px" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
@@ -100,7 +122,7 @@ const BayerFreelancer = ({ categories }) => {
                                     primary={<div className={classes.featuresText}>{t('payment')}</div>}
                                 />
                             </ListItem>
-                            <ListItem>
+                            <ListItem className={classes.ListItem}>
                                 <ListItemAvatar>
                                     <Avatar style={{ background: "transparent", marginTop: "-20px" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
@@ -110,7 +132,7 @@ const BayerFreelancer = ({ categories }) => {
                                     primary={<div className={classes.featuresText}>{t('get_maximum_value')}</div>}
                                 />
                             </ListItem>
-                            <ListItem>
+                            <ListItem className={classes.ListItem}>
                                 <ListItemAvatar>
                                     <Avatar style={{ background: "transparent", marginTop: "-20px" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
@@ -130,7 +152,7 @@ const BayerFreelancer = ({ categories }) => {
                     {/* freelancer */}
                     <div>
                         <div className={classes.features}>
-                            <ListItem>
+                            <ListItem className={classes.ListItem}>
                                 <ListItemAvatar>
                                     <Avatar style={{ background: "transparent", marginTop: "-20px" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
@@ -140,7 +162,7 @@ const BayerFreelancer = ({ categories }) => {
                                     primary={<div className={classes.featuresText}>{t('three_month_commission')}</div>}
                                 />
                             </ListItem>
-                            <ListItem>
+                            <ListItem className={classes.ListItem}>
                                 <ListItemAvatar>
                                     <Avatar style={{ background: "transparent", marginTop: "-20px" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
@@ -150,7 +172,7 @@ const BayerFreelancer = ({ categories }) => {
                                     primary={<div className={classes.featuresText}>{t('three_month_no_money')}</div>}
                                 />
                             </ListItem>
-                            <ListItem>
+                            <ListItem className={classes.ListItem}>
                                 <ListItemAvatar>
                                     <Avatar style={{ background: "transparent", marginTop: "-20px" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />

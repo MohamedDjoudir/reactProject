@@ -65,6 +65,7 @@ body {
   border: none;
   background: #fff;
   text-align: center;
+  z-index: 56652;
   box-shadow: 2px 1px 25px -3px rgba(0, 0, 0, 0.57);
   -webkit-box-shadow: 2px 1px 25px -3px rgba(0, 0, 0, 0.57);
   -moz-box-shadow: 2px 1px 25px -3px rgba(0, 0, 0, 0.57);
@@ -204,7 +205,7 @@ body {
 }
 /* scrollbarr */
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 9px;
   height: 0px;
 }
 /* Track */
@@ -213,24 +214,39 @@ body {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #85ddf8;
+  background: #0fb3f0;
   border-radius: 2px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #6bb7ce;
+  background: #06cdff;
 }
 ::selection {
   color: rgba(0, 0, 0, 0.712);
   background: #014b5898;
 }
 .SwiperWrapper {
-  padding: 2rem 3rem !important;
+  padding: 2rem 1rem !important;
+  width: 90vw;
+  margin: 0 auto;
   max-width: 1365px;
+ }
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 @media only screen and (max-width: 900px) {
+  .textInImg {   
+    white-space: normal;
+   
+  }
+   
   .SwiperWrapper {
     padding: 0 !important;
+    width: 90vw;
+    margin: 0 auto;
     max-width: 1365px;
   }
   .body-header-section {
@@ -303,7 +319,7 @@ body {
 .Mui-selected div {
   background-color: rgba(7, 26, 197, 0) !important;
 }
- 
+
 .Mui-expanded div {
   background-color: rgba(7, 26, 197, 0) !important;
 }

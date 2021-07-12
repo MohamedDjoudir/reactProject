@@ -42,15 +42,15 @@ const MeetFreelancers = ({ freelancers }) => {
             },
         },
         howItWorkItemTitle: {
-            width: "max-content",
             margin: "20px auto",
+            textAlign: "center",
+            lineHeight:"35px",
             fontFamily: "'Almarai',sans-serif",
             fontSize: "30px",
             color: "#303030",
             [theme.breakpoints.down('xs')]: {
                 fontSize: "23px",
-                textAlign: i18n.language === 'ar' ? "right" : "left",
-            },
+             },
         },
     }))
     const classes = useStyles();

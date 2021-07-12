@@ -12,20 +12,19 @@ import HowItIsWork from './components/HowItIsWork'
 import Services from './components/Services'
 import MeetFreelancers from './components/MeetFreelancers'
 import FindTheRightPerson from './components/FindTheRightPers'
-// animation
-import SwiperCore, { Autoplay, Navigation } from 'swiper';
-import 'swiper/swiper.scss';
-import 'swiper/components/navigation/navigation.scss';
+
 // M_UI component s
 const Home = () => {
     // componnet states
     const [categories, setCategories] = useState(null)
     const [services, setServices] = useState(null)
     const [freelancers, setFreelancers] = useState(null)
+
+
+
     // componnet did mount
     useEffect(() => {
-        // swiiper api 
-        SwiperCore.use([Autoplay, Navigation]);
+       
         // fetchData
         async function fetchData() {
             // get categories

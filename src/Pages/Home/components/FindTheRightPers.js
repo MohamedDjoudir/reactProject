@@ -94,8 +94,10 @@ const FindTheRightPerson = ({ services }) => {
             width: "100%",
             color: "white",
             fontSize: "30px",
+            lineHeight:"38px",
             fontFamily: "'Almarai',sans-serif",
             position: "relative",
+            margin:"20px auto"
         },
         viewBTN: {
             background: "#65c042",

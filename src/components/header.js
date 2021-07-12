@@ -14,12 +14,15 @@ import List from '@material-ui/core/List';
 // assets
 import Logo from '../assets/logo/logo.png'
 export default function ButtonAppBar() {
+    const { t, i18n } = useTranslation();
+
     // component states
     const [isMobile, setIsMobile] = useState(false)
     const [menu, setMenu] = useState(false)
+
     // mobile screen detecter
     const handleResize = () => {
-        if (window.innerWidth < 767) {
+        if (window.innerWidth < 900) {
             setIsMobile(true)
         } else {
             setIsMobile(false)
@@ -34,7 +37,7 @@ export default function ButtonAppBar() {
         window.addEventListener("resize", handleResize)
     }, [])
     // classNames
-    const useStyles = makeStyles({
+    const useStyles = makeStyles(theme => ({
         AppBar: {
             background: '#f6fcfe',
             color: "#4d4d4f",
@@ -47,7 +50,7 @@ export default function ButtonAppBar() {
             width: "100%",
             maxWidth: "1400px",
             margin: "0 auto",
-            padding:"0 35px 0 25px !important"
+            padding: "0 35px 0 25px !important"
         },
         grow: {
             flexGrow: 1,
@@ -69,7 +72,7 @@ export default function ButtonAppBar() {
         },
         btnVide: {
             opacity: "0",
-            minWidth:"4vw"
+            minWidth: "4vw"
         },
         btn: {
             textTransform: 'none',
@@ -82,19 +85,43 @@ export default function ButtonAppBar() {
                 background: "none",
             }
         },
+        btn2: {
+            textTransform: 'none',
+            margin: "5px",
+            width: "130%",
+            cursor: "pointer",
+
+            "&:hover": {
+                background: "none",
+            },
+            "&:active": {
+                background: "none",
+            }
+        },
         menu: {
             position: "fixed",
             height: '100vh',
-            width: "70vw",
+            width: "50vw",
             background: "#fff",
             top: "0",
+            overflow: "hidden",
             zIndex: "-1",
-            left: menu ? "0" : '-200%',
+            left: (i18n.language !== "ar" && menu) ? 0 : i18n.language !== "ar" ? '-200%' : '',
+            right: (i18n.language === "ar" && menu) ? 0 : i18n.language === "ar" ? '-200%' : '',
             transition: "all 700ms cubic-bezier(0.16, 1, 0.3, 1)",
-            display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
-            padding: "80px 20px 0"
+            padding: i18n.language !== "ar" ? "80px 20px 0" : "80px 20px 0",
+            display: "none",
+            [theme.breakpoints.down('sm')]: {
+                display: "flex"
+            },
+        },
+        menu1: {
+            display: "block",
+            [theme.breakpoints.down('sm')]: {
+                display: "none"
+            },
         },
         menuBG: {
             transition: "all 700ms cubic-bezier(0.16, 1, 0.3, 1)",
@@ -105,15 +132,28 @@ export default function ButtonAppBar() {
             opacity: "0.5",
             top: "0",
             right: menu ? "0" : '-200%',
-            zIndex: "-10"
+            zIndex: "-10",
+            display: "none",
+            [theme.breakpoints.down('sm')]: {
+                display: "block"
+            },
+        },
+        menuList: {
+            width: "100%",
+
+            [theme.breakpoints.down('sm')]: {
+             },
         },
         menuBtn: {
             fontSize: "35px",
-            cursor: "pointer"
+            cursor: "pointer",
+            display: "none",
+            [theme.breakpoints.down('sm')]: {
+                display: "block"
+            },
         },
-    });
+    }));
     const classes = useStyles();
-    const { t, i18n } = useTranslation();
     //LanguageSwitcher
     const LanguageSwitcher = () => {
         return i18n.language !== "ar" ? i18n.changeLanguage('ar') : i18n.changeLanguage('en');
@@ -128,7 +168,7 @@ export default function ButtonAppBar() {
                         </Link>
                     </Box>
                     <div className={classes.grow} />
-                    {!isMobile && <Box>
+                    <Box className={classes.menu1}>
                         <Button className={classes.btn} disableRipple > <Link to={"/page2"} className={classes.link} >  {t("services")}</Link></Button>
                         <Button className={classes.btn} disableRipple> <Link to={"/page2"} className={classes.link}>{t("freelancers")}</Link></Button>
                         <Button className={classes.btn} disableRipple> <Link to={"/page2"} className={classes.link}>{t("howItWork")}</Link></Button>
@@ -136,20 +176,20 @@ export default function ButtonAppBar() {
                         <Button className={classes.btn} disableRipple> <Link to={"/page2"} className={classes.link}>{t("signIn")}</Link></Button>
                         <Button className={classes.btnVide} disableRipple> </Button>
                         <Button onClick={LanguageSwitcher} className={classes.btn}   ><div className={classes.link}>{i18n.languages[2] === "ar" ? "العربية" : "English"} </div></Button>
-                    </Box>}
-                    {(isMobile) && <Box className={classes.menu}>
-                        <List>
-                            <ListItem className={classes.btn}  > <Link to={"/page2"} className={classes.link} >  {t("services")}</Link></ListItem>
-                            <ListItem className={classes.btn} > <Link to={"/page2"} className={classes.link}>{t("freelancers")}</Link></ListItem>
-                            <ListItem className={classes.btn} > <Link to={"/page2"} className={classes.link}>{t("howItWork")}</Link></ListItem>
-                            <ListItem className={classes.btn} > <Link to={"/page2"} className={classes.link}>{t("signUp")}</Link></ListItem>
-                            <ListItem className={classes.btn} > <Link to={"/page2"} className={classes.link}>{t("signIn")}</Link></ListItem>
+                    </Box>
+                    <Box className={classes.menu}>
+                        <List className={classes.menuList}>
+                            <ListItem className={classes.btn2}  > <Link to={"/page2"} className={classes.link} >  {t("services")}</Link></ListItem>
+                            <ListItem className={classes.btn2} > <Link to={"/page2"} className={classes.link}>{t("freelancers")}</Link></ListItem>
+                            <ListItem className={classes.btn2} > <Link to={"/page2"} className={classes.link}>{t("howItWork")}</Link></ListItem>
+                            <ListItem className={classes.btn2} > <Link to={"/page2"} className={classes.link}>{t("signUp")}</Link></ListItem>
+                            <ListItem className={classes.btn2} > <Link to={"/page2"} className={classes.link}>{t("signIn")}</Link></ListItem>
                             <Divider />
-                            <ListItem onClick={LanguageSwitcher} className={classes.btn}  ><div className={classes.link}>{i18n.languages[2] === "ar" ? "العربية" : "English"} </div></ListItem>
+                            <ListItem onClick={LanguageSwitcher} className={classes.btn2}  ><div className={classes.link}>{i18n.languages[2] === "ar" ? "العربية" : "English"} </div></ListItem>
                         </List>
-                    </Box>}
-                    {(isMobile) && <Box className={classes.menuBG} onClick={() => setMenu(!menu)} />}
-                    {isMobile && <div><MenuIcon className={classes.menuBtn} onClick={() => setMenu(!menu)} /> </div>}
+                    </Box>
+                    <Box className={classes.menuBG} onClick={() => setMenu(!menu)} />
+                    <div><MenuIcon className={classes.menuBtn} onClick={() => setMenu(!menu)} /> </div>
                 </Toolbar>
             </AppBar>
             <div className={classes.AppBarSpace} />

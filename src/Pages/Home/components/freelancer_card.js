@@ -40,7 +40,7 @@ const FreelancerCard = ({ freelancer, index }) => {
             fontFamily: "'Cairo',sans-serif",
             fontSize: "18px",
             margin: "23px auto 0",
-            height: "135px",
+            height: "120px",
             overflow: "hidden",
             lineHeight: "19px"
         },
@@ -60,7 +60,7 @@ const FreelancerCard = ({ freelancer, index }) => {
     const classes = useStyles();
     return (
         <Zoom style={{ transitionDelay: `${1 * index}0ms` }} in={true}>
-            <Paper style={{ padding: "20px 10px", margin: '0px 0px', background: "transparent" }} elevation={0} >
+            <Paper style={{ padding: "20px 10px", margin: '0px 20px', background: "transparent" }} elevation={0} >
                 <Grid >
                     <Card sx={{ maxWidth: 345 }} style={{
                         boxShadow: "0 0 10px rgba(150,150,150,0.5)",

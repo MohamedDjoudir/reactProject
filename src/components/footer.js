@@ -32,15 +32,18 @@ export default function Footer() {
         setExpanded3(nodeIds); setExpanded([]); setExpanded2([]);
     };
     // mobile screen detecter
+    console.log(window.outerWidth)
+    console.log(expanded)
     const handleResize2 = () => {
-        if (window.innerWidth < 600) {
+
+        if ((window.outerWidth) < 970) {
             setIsMobile2(true)
         } else {
             setIsMobile2(false)
         }
     }
     useEffect(() => {
-        if (window.innerWidth < 600) {
+        if (window.outerWidth < 970) {
             setIsMobile2(true)
         } else {
             setIsMobile2(false)
@@ -48,18 +51,33 @@ export default function Footer() {
         window.addEventListener("resize", handleResize2)
     }, [])
     // classNames
-    const useStyles = makeStyles({
+    const useStyles = makeStyles(theme => ({
         footer: {
-            height: "calc(80vh - 80px)",
-            maxHeight: "400px",
+            height: "450px",
+            maxHeight: "450px",
             margin: "10px auto",
             display: "flex",
-            flexDirection: isMobile2 ? "column" : "row",
+            transition: "all 400ms",
+            flexDirection: "row",
             padding: "7rem 5rem",
+            [theme.breakpoints.down('sm')]: {
+                flexDirection: "column",
+                height: expanded.length !== 0 || expanded2.length !== 0 || expanded3.length !== 0 ? "430px" : "300px",
+
+                justifyContent: "flex-start",
+                padding: "3rem 2rem",
+
+
+            },
+
         },
         TreeView: {
-            width: isMobile2 ? 0 : "35%",
+            width: "35%",
             backgroundColor: 'transparent !important',
+            [theme.breakpoints.down('sm')]: {
+                width: 0
+
+            },
         },
         Treeitem: {
             marginTop: "5px",
@@ -77,19 +95,27 @@ export default function Footer() {
             whiteSpace: "nowrap",
         },
         label: {
-            fontSize: isMobile2 ? "25px" : "22px",
+            fontSize: "22px",
             color: "#303030",
             borderBottom: "3px solid #0fb3f0",
             whiteSpace: "nowrap",
             width: "25px",
             fontFamily: "'Almarai',sans-serif",
+            [theme.breakpoints.down('sm')]: {
+                fontSize: "25px",
+            },
         },
         socialMediaWrapper: {
             display: "flex",
-            width: isMobile2 ? "100" : "40%",
+            width: "40%",
             margin: "120px auto 20px auto",
             alignItems: "center",
-            justifyContent: "center"
+            justifyContent: "center",
+            [theme.breakpoints.down('sm')]: {
+                width: "100%",
+                margin: "0px auto 20px auto",
+
+            },
         },
         socialMediaIconWrapper: {
             margin: "0 1rem",
@@ -110,8 +136,11 @@ export default function Footer() {
             margin: "0px auto",
             alignItems: "center",
             padding: "15px 30px",
-            flexDirection: isMobile2 ? "column" : "row",
-            justifyContent: "space-between"
+            flexDirection: "row",
+            justifyContent: "space-between",
+            [theme.breakpoints.down('sm')]: {
+                flexDirection: "column"
+            },
         },
         creditCardsWraper: {
             display: "flex",
@@ -131,7 +160,7 @@ export default function Footer() {
         grow: {
             flexGrow: "1"
         }
-    });
+    }));
     const theme = createTheme({
         palette: {
             primary: {

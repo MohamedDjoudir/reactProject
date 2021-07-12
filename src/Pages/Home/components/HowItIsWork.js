@@ -33,11 +33,18 @@ const HowItIsWork = ({ categories }) => {
             display: "flex",
             [theme.breakpoints.down('xs')]: {
                 display: "block",
+                padding: "20px 10px",
+
+
             },
+
+
         },
         howItWorkWrapper: {
             background: "#e6f7fd",
             padding: "20px 0",
+            
+
         },
         howItWorkItemTitle: {
             width: "max-content",
@@ -67,8 +74,10 @@ const HowItIsWork = ({ categories }) => {
             fontFamily: "'Almarai',sans-serif",
             lineHeight: "27px",
             textAlign: 'center',
+            fontSize: "16px",
             [theme.breakpoints.down('md')]: {
                 textAlign: i18n.language === 'ar' ? "right" : "left",
+                fontSize: "13px",
             },
         },
         howItWorkItemWrapper: {
