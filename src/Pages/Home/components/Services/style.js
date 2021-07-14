@@ -1,14 +1,9 @@
-import React from 'react'
-import ServiceCard from "./servic_card";
+import { makeStyles } from '@material-ui/styles';
 import { useTranslation } from 'react-i18next';
-// importing assets 
-// mui
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-const HowItIsWork = ({ services }) => {
-    const { t,i18n } = useTranslation();
-    //styling
-    const useStyles = makeStyles(theme => ({
+// classNames
+export const useStyles = (expanded) => {
+    const { i18n } = useTranslation();
+    return makeStyles(theme => ({
         servicesWrapper: {
             width: "100%",
             maxWidth: "1400px",
@@ -51,25 +46,5 @@ const HowItIsWork = ({ services }) => {
                 textAlign: i18n.language === 'ar' ? "right" : "left",
             },
         },
-    }))
-    const classes = useStyles();
-    return (
-        <>
-            <div className={classes.howItWorkItemTitle}>
-                {t('services')}
-            </div>
-            <div className={classes.servicesWrapper}>
-                <Grid className={classes.gtidWrapper} >
-                    <Grid item sm={12} xl={12}>
-                        <Grid container justifyContent="center" spacing={2}>
-                            {services && services.map((service, i) => <div key={"service" + i} className={classes.serviceCardWrapprer} >
-                                <ServiceCard service={service} index={i} />
-                            </div>)}
-                        </Grid>
-                    </Grid>
-                </Grid>
-            </div>
-        </>
-    )
+    }));
 }
-export default HowItIsWork

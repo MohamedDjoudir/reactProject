@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
-import Layout from '../../components/layout';
+import Layout from '../../components/Layout';
 import { connect } from 'react-redux';
 //import { makeStyles } from '@material-ui/core/styles';
 import Seo from '../../components/Seo'

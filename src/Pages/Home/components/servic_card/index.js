@@ -12,84 +12,14 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Divider from '@material-ui/core/Divider';
-import { makeStyles } from '@material-ui/core/styles';
-import { FaStar } from 'react-icons/fa';
+ import { FaStar } from 'react-icons/fa';
+import {useStyles} from './style'
+
 const ServiceCard = ({ service, index }) => {
     // language
     const { t, i18n } = useTranslation();
-    //mui styling 
-    const useStyles = makeStyles(theme => ({
-        user_name: {
-            fontSize: "15px",
-            color: "#303030",
-            fontFamily: "'Almarai',sans-serif",
-            lineHeight:"30px",
-            textAlign: i18n.language === 'ar' ? "right" : "left",
-            overflow: "Hidden",
-            fontWeight: "400",
-            width: "100%",
-            whiteSpace: "nowrap",
-        },
-        user_name_job: {
-            fontSize: "10px",
-            color: "#303030",
-            fontFamily: "'Almarai',sans-serif",
-            textAlign: i18n.language === 'ar' ? "right" : "left",
-            overflow: "Hidden",
-            marginTop: "-7px",
-            lineHeight: "15px",
-            minHeight: "20px",
-            maxHeight: "20px",
-            height: "20px"
-        },
-        CardContent: {
-            padding: "10px",
-            paddingLeft: "5px",
-            paddingRight: "5px",
-        },
-        ListItem: {
-            padding: "10px",
-            paddingLeft: "5px",
-            paddingRight: "5px",
-        },
-        jobName: {
-            minHeight: "70px",
-            maxHeight: "70px",
-            paddingLeft: "10px",
-            paddingRight: "10px",
-            height: "70px",
-            overflow: "hidden",
-            fontSize: "16px",
-            fontFamily: "'Cairo',sans-serif",
-        },
-        soldbar: {
-            fontSize: "16px",
-            fontFamily: "'Cairo',sans-serif",
-            color: '#00AEEF',
-            display: "flex",
-            justifyContent: "space-between",
-            padding: "0 10px"
-        },
-        rating: {
-            width: "40%",
-            minWidth: "max-content",
-            display: "flex",
-            justifyContent: "space-between"
-        },
-        ViewBtn: {
-            background: "#65c042",
-            color: "#fff",
-            marginTop: "-10px",
-            borderRadius: "10px",
-            fontFamily: "'Cairo',sans-serif",
-            paddingTop: "10px",
-            paddingBottom: "10px",
-            "&:hover": {
-                background: "#92d878",
-            }
-        }
-    }))
-    const classes = useStyles();
+   
+    const classes = useStyles()();
     return (
         <Zoom style={{ transitionDelay: `${1 * index}0ms` }} in={true}>
             <Paper style={{ padding: "20px 10px", margin: '0px 0px', background: "transparent" }} elevation={0} >

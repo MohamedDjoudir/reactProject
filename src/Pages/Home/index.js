@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Layout from '../../components/layout';
-import server_api from '../../components/server_api';
+import Layout from '../../components/Layout';
+import server_api from '../../components/Api';
 import { connect } from 'react-redux';
 import Seo from '../../components/Seo'
 import TopSection from './components/TopSection'
@@ -19,7 +19,6 @@ const Home = () => {
     const [categories, setCategories] = useState(null)
     const [services, setServices] = useState(null)
     const [freelancers, setFreelancers] = useState(null)
-
 
 
     // componnet did mount

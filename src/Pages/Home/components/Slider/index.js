@@ -3,40 +3,18 @@ import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // mui
-import { makeStyles } from '@material-ui/core/styles';
-// animation
+ // animation
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
+import {useStyles} from './style'
+
 import SwiperCore, { Autoplay, Navigation } from 'swiper';
  // swiiper api 
  SwiperCore.use([Autoplay, Navigation]);
 const Slider = ({ categories }) => {
     const { t, i18n } = useTranslation();
-    //styling
-    const useStyles = makeStyles(theme => ({
-        categories: {
-            fontSize: "27px",
-            width: "max-content",
-            margin: "0 auto",
-            fontFamily: "'Almarai',sans-serif",
-            color: "#303030",
-            fontWeight: "400"
-        },
-        sliderTitleWrapper: {
-            margin: "2rem auto ",
-            background: "white"
-        },
-        sliderWrapper: {
-            background: "white"
-        },
-        discover: {
-            textTransform: "none",
-            padding: "5px 2rem",
-            fontFamily: "'Almarai',sans-serif",
-            margin: "2rem auto"
-        },
-    }))
-    const classes = useStyles();
+     
+    const classes = useStyles()();
     return (
         <>
             <div className={classes.sliderWrapper}>
