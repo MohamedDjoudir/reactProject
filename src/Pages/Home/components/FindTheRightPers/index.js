@@ -3,13 +3,12 @@ import { useTranslation } from 'react-i18next';
 // importing assets 
 // mui
 import Button from '@material-ui/core/Button';
- import {useStyles} from './style'
+ import classes from './FindTheRightPers.module.scss'
 
 const FindTheRightPerson = ({ services }) => {
     const { t } = useTranslation();
      
-    const classes = useStyles()();
-    return (
+     return (
         <>
             <div className={classes.Find_the_right_person}>
                 <div style={{ position: "relative" }}>

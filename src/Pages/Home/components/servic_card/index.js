@@ -13,14 +13,13 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Divider from '@material-ui/core/Divider';
  import { FaStar } from 'react-icons/fa';
-import {useStyles} from './style'
+import classes from './servic_card.module.scss'
 
 const ServiceCard = ({ service, index }) => {
     // language
     const { t, i18n } = useTranslation();
    
-    const classes = useStyles()();
-    return (
+     return (
         <Zoom style={{ transitionDelay: `${1 * index}0ms` }} in={true}>
             <Paper style={{ padding: "20px 10px", margin: '0px 0px', background: "transparent" }} elevation={0} >
                 <Grid >

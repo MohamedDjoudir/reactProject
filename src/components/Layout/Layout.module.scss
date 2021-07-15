@@ -1,0 +1,32 @@
+.root {
+    transition: all 300ms;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #fff;
+    width: 100vw;
+    overflow: hidden;
+    opacity: 0;
+    animation: effect 200ms ease-in-out forwards;
+    @keyframes effect {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+.WhatsAppIconWrapper {
+    position: fixed;
+    bottom: 6vh;
+    right: 5vw;
+    z-index: 5556;
+}
+.WhatsAppIcon {
+    font-size: clamp(3.5rem, calc(1.5rem + 3vw), 4rem);
+    background: #25d366;
+    fill: white;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 1px 1.5px 2px rgba(0, 0, 0, 0.3);
+}

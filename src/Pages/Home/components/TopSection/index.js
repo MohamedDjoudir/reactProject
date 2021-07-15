@@ -6,31 +6,24 @@ import InputBase from '@material-ui/core/InputBase';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import SearchIcon from '@material-ui/icons/Search';
 import Chip from '@material-ui/core/Chip';
- import {useStyles} from './style'
+import classes from './TopSection.module.scss'
 
 const TopSection = () => {
-    const { t, i18n } = useTranslation();    
-    const classes = useStyles()();
+    const { t } = useTranslation();
     return (
         <section>
-            <div className="body-header-section" >
-                <div className='body-header-section-img-wrapper'>
-                    <div className='body-header-section-img' alt='best-services' />
+            <div className={classes.body_header_section} >
+                <div className={classes.body_header_section_img_wrapper}>
+                    <div className={classes.body_header_section_img} alt='best-services' />
                 </div>
-                <div className="text-wraper">
-                    <div className="text-wraper-title" style={{ fontFamily: i18n.language !== 'ar' ? "'DM Sans', sans-serif" : '"Almarai", sans-serif' }}>
+                <div className={classes.text_wraper} >
+                    <div className={classes.text_wraper_title}   >
                         {t('bestFrellancer')}
                     </div>
-                    <div className="text-wraper-description" style={{
-                        fontFamily: i18n.language !== 'ar' ? "'Roboto', sans-serif" : '"Cairo", sans-serif',
-                        lineHeight: i18n.language !== 'ar' ? "27px" : '35px',
-                        fontWeight: "400"
-                    }}>
+                    <div className={classes.text_wraper_description} >
                         {t('ForlansoDesc')}
                     </div>
-                    <InputLabel htmlFor="search" style={{
-                        color: "#ffffde", fontFamily: '"Almarai", sans-serif', margin: "7px 0", fontSize: "14px"
-                    }}>
+                    <InputLabel htmlFor="search" className={classes.Inputlabel}  >
                         {t('try')}
                     </InputLabel>
                     <div className={classes.search}>

@@ -9,13 +9,12 @@ import { useTranslation } from 'react-i18next';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
-import {useStyles} from './style'
+import classes from './HowItIsWork.module.scss'
  
 const HowItIsWork = ({ categories }) => {
     const { t } = useTranslation();
      
-    const classes = useStyles()();
-    return (
+     return (
         <>
             <div className={classes.howItWorkWrapper} >
                 <div className={classes.howItWorkItemTitle}>

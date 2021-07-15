@@ -23,8 +23,7 @@ const Home = () => {
 
     // componnet did mount
     useEffect(() => {
-       
-        // fetchData
+         // fetchData
         async function fetchData() {
             // get categories
             const res = await server_api.get(`categories`)

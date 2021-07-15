@@ -1,0 +1,43 @@
+.servicesWrapper {
+    width: 100%;
+    max-width: 1400px;
+    overflow: hidden;
+}
+.FreelancerCardWrapprer {
+    min-width: 350px;
+    width: 350px;
+    max-width: 350px;
+    @media (max-width: 900px) {
+        margin: 20px auto;
+        min-width: 350px;
+        width: 350px;
+        max-width: 350px;
+    }
+}
+.gridWrapper {
+    padding: 20px 50px;
+    position: relative;
+    border-radius: 10px;
+    margin: 35px auto 0 auto;
+    width: 100%;
+    max-width: 1400px;
+    @media (max-width: 900px) {
+        padding: 10px;
+        position: relative;
+        border-radius: 7px;
+        margin: 35px auto 0 auto;
+        width: 100%;
+        max-width: 1400px;
+    }
+}
+.howItWorkItemTitle {
+    margin: 20px auto;
+    text-align: center;
+    line-height: 35px;
+    font-family: "Almarai", sans-serif;
+    font-size: 30px;
+    color: #303030;
+    @media (max-width: 600px) {
+        font-size: 23px;
+    }
+}

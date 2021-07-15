@@ -7,14 +7,13 @@ import { useTranslation } from 'react-i18next';
 import Grid from '@material-ui/core/Grid';
 import Zoom from '@material-ui/core/Zoom';
 import Paper from '@material-ui/core/Paper';
- import {useStyles} from './style'
+ import classes from './freelancer_card.module.scss'
 
 const FreelancerCard = ({ freelancer, index }) => {
     // language
     const { t, i18n } = useTranslation();
      
-    const classes = useStyles()();
-    return (
+     return (
         <Zoom style={{ transitionDelay: `${1 * index}0ms` }} in={true}>
             <Paper style={{ padding: "20px 10px", margin: '0px 20px', background: "transparent" }} elevation={0} >
                 <Grid >

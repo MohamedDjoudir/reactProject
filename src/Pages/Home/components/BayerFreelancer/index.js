@@ -8,13 +8,12 @@ import ListItemText from '@material-ui/core/ListItemText';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import Avatar from '@material-ui/core/Avatar';
 // mui
-import {useStyles} from './style'
+import classes from './BayerFreelancer.module.scss'
  const BayerFreelancer = ({ categories }) => {
     const { t} = useTranslation();
     //styling
      
-    const classes = useStyles()();
-    return (
+     return (
         <>
             <div className={classes.bayerFreelancerWrapper2}>
                 <div className={classes.bayerFreelancerWrapper} >
@@ -23,7 +22,7 @@ import {useStyles} from './style'
                         <div className={classes.features}>
                             <ListItem className={classes.ListItem}>
                                 <ListItemAvatar>
-                                    <Avatar style={{ background: "transparent", marginTop: "-20px" }}>
+                                    <Avatar style={{ background: "transparent" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
                                     </Avatar>
                                 </ListItemAvatar>
@@ -33,7 +32,7 @@ import {useStyles} from './style'
                             </ListItem>
                             <ListItem className={classes.ListItem}>
                                 <ListItemAvatar>
-                                    <Avatar style={{ background: "transparent", marginTop: "-20px" }}>
+                                    <Avatar style={{ background: "transparent" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
                                     </Avatar>
                                 </ListItemAvatar>
@@ -43,7 +42,7 @@ import {useStyles} from './style'
                             </ListItem>
                             <ListItem className={classes.ListItem}>
                                 <ListItemAvatar>
-                                    <Avatar style={{ background: "transparent", marginTop: "-20px" }}>
+                                    <Avatar style={{ background: "transparent" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
                                     </Avatar>
                                 </ListItemAvatar>
@@ -53,7 +52,7 @@ import {useStyles} from './style'
                             </ListItem>
                             <ListItem className={classes.ListItem}>
                                 <ListItemAvatar>
-                                    <Avatar style={{ background: "transparent", marginTop: "-20px" }}>
+                                    <Avatar style={{ background: "transparent" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
                                     </Avatar>
                                 </ListItemAvatar>
@@ -73,7 +72,7 @@ import {useStyles} from './style'
                         <div className={classes.features}>
                             <ListItem className={classes.ListItem}>
                                 <ListItemAvatar>
-                                    <Avatar style={{ background: "transparent", marginTop: "-20px" }}>
+                                    <Avatar style={{ background: "transparent" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
                                     </Avatar>
                                 </ListItemAvatar>
@@ -83,7 +82,7 @@ import {useStyles} from './style'
                             </ListItem>
                             <ListItem className={classes.ListItem}>
                                 <ListItemAvatar>
-                                    <Avatar style={{ background: "transparent", marginTop: "-20px" }}>
+                                    <Avatar style={{ background: "transparent" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
                                     </Avatar>
                                 </ListItemAvatar>
@@ -93,7 +92,7 @@ import {useStyles} from './style'
                             </ListItem>
                             <ListItem className={classes.ListItem}>
                                 <ListItemAvatar>
-                                    <Avatar style={{ background: "transparent", marginTop: "-20px" }}>
+                                    <Avatar style={{ background: "transparent" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
                                     </Avatar>
                                 </ListItemAvatar>

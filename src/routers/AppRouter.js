@@ -6,12 +6,12 @@ import i18n from './../i18n/i18n';
 import HomePage from '../Pages/Home';
 import Page2 from '../Pages/Page2';
 const AppRouter = () => {
-
+  
   return (
     <>
       <I18nextProvider i18n={i18n}>
         <Switch>
-          <Route exact path='/' component={HomePage} />
+          <Route exact path={`/:localeCode(en|ar)?${'/'}`} component={HomePage} />
           <Route exact path='/page2' component={Page2} />
           <Route>
             <div> 404 not found</div>

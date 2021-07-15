@@ -1,0 +1,42 @@
+.servicesWrapper {
+    width: 100%;
+    max-width: 1400px;
+    overflow: hidden;
+}
+.serviceCardWrapprer {
+    min-width: 25%;
+    width: 25%;
+    max-width: 25%;
+    @media (max-width: 1280px) {
+        width: 40%;
+        min-width: 40%;
+    }
+    @media (max-width: 600px) {
+        width: 95vw;
+        min-width: 95vw;
+    }
+}
+.gtidWrapper {
+    padding: 20px 50px;
+    position: relative;
+    border-radius: 10px;
+    margin: 35px auto 0 auto;
+    width: 100%;
+    max-width: 1400px;
+    @media (max-width: 900px) {
+        padding: 10px;
+        border-radius: 7px;
+        margin: 35px auto 0 auto;
+    }
+}
+.howItWorkItemTitle {
+    width: max-content;
+    margin: 3rem auto 0rem;
+    font-family: "Almarai", sans-serif;
+    font-size: 30px;
+    color: #303030;
+    @media (max-width: 600px) {
+        font-size: 23px;
+        //textAlign: i18n.language === 'ar' ? "right" : "left",
+    }
+}

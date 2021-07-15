@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
  // animation
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
-import {useStyles} from './style'
+import classes from './Slider.module.scss'
 
 import SwiperCore, { Autoplay, Navigation } from 'swiper';
  // swiiper api 
@@ -14,14 +14,13 @@ import SwiperCore, { Autoplay, Navigation } from 'swiper';
 const Slider = ({ categories }) => {
     const { t, i18n } = useTranslation();
      
-    const classes = useStyles()();
-    return (
+     return (
         <>
             <div className={classes.sliderWrapper}>
                 <div className={classes.sliderTitleWrapper}>
                     <h2 className={classes.categories}>{t('categories')}</h2>
                 </div>
-                <div className="SwiperWrapper">
+                <div className={classes.SwiperWrapper}>
                     <Swiper
                         spaceBetween={40}
                         slidesPerView={4}
@@ -72,11 +71,11 @@ const Slider = ({ categories }) => {
                                     width: "100vw"
                                 }}>
                                     <a href={"https://www.forlanso.com/services?category=" + item.slug} target="_blanck">
-                                        <div className="img-wrapper">
+                                        <div className={classes.img_wrapper}>
                                             <img src={"https://www.forlanso.com/" + item.icon} alt={item['name_' + i18n.language]}
-                                                className="slider-photo" />
-                                            <div className="black-layer">
-                                                <div className=" textInImg">{item['name_' + i18n.language]}</div>
+                                                className={classes.slider_photo} />
+                                            <div className={classes.black_layer} >
+                                                <div className={classes.textInImg}>{item['name_' + i18n.language]}</div>
                                             </div>
                                         </div>
                                     </a>

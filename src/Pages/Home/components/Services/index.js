@@ -4,13 +4,12 @@ import { useTranslation } from 'react-i18next';
 // importing assets 
 // mui
 import Grid from '@material-ui/core/Grid';
- import {useStyles} from './style'
+ import classes from './Services.module.scss'
 
 const HowItIsWork = ({ services }) => {
     const { t} = useTranslation();
      
-    const classes = useStyles()();
-    return (
+     return (
         <>
             <div className={classes.howItWorkItemTitle}>
                 {t('services')}

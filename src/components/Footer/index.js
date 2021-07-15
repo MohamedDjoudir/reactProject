@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 // M_UI component s
 import { ExpandMore, Twitter, LinkedIn, Instagram, Facebook, ChevronRight } from '@material-ui/icons';
 import { TreeView, TreeItem } from '@material-ui/lab/';
-import {useStyles} from "./FooterStyle"; 
+import classes from "./FooterStyle.module.scss"; 
 // assets
 import payoneer from "../../assets/home-assets/payoneer.svg"
 import paypal from "../../assets/home-assets/paypal.svg"
@@ -12,8 +12,7 @@ import mastercard from "../../assets/home-assets/mastercard.svg"
 export default function Footer() {
     // component states
     const [expanded, setExpanded] = React.useState([]);
-    const classes = useStyles(expanded)();
-    const { t} = useTranslation();
+     const { t} = useTranslation();
 
 
     const handleToggle = (event, nodeIds) => {
@@ -41,7 +40,9 @@ export default function Footer() {
 
     return (
         <div>
-            <div className={classes.footer}>
+            <div className={classes.footer} style={{
+                height: expanded.length !== 0 ? "430px" : "300px",
+            }}>
                 <div className={classes.TreeViewDesk}>
                     <TreeView className={classes.TreeView}
                         aria-label="controlled"
