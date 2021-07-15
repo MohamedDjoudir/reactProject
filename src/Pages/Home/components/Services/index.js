@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 const HowItIsWork = ({ services }) => {
     const { t} = useTranslation();
      
+     
      return (
         <>
             <div className={classes.howItWorkItemTitle}>

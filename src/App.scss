@@ -13,12 +13,13 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   background: #fff;
-}
+ 
+ }
 body {
   margin: 0;
   padding: 0;
   background: #fff;
-}
+  }
 
  
 /* **
@@ -49,7 +50,7 @@ body {
 * scrollbarr
 */
 ::-webkit-scrollbar {
-  width: 9px;
+  width: 12px;
   height: 0px;
 }
 /* Track */
@@ -69,6 +70,7 @@ body {
   color: rgba(0, 0, 0, 0.712);
   background: #014b5898;
 }
+ 
 
 /* **
  * mui

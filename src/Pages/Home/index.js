@@ -23,7 +23,7 @@ const Home = () => {
 
     // componnet did mount
     useEffect(() => {
-         // fetchData
+        // fetchData
         async function fetchData() {
             // get categories
             const res = await server_api.get(`categories`)
@@ -53,15 +53,14 @@ const Home = () => {
         </Layout >
     )
 }
-const mapStateToProps = state => {
+/* const mapStateToProps = state => {
     return {
         total: state.total
     };
-};
-const mapDispatchToProps = dispatch => {
+}; */
+/* const mapDispatchToProps = dispatch => {
     return {
-        add1: () => dispatch({ type: 'ADD' }),
-        remove1: () => dispatch({ type: 'REMOVE' })
+     
     }
-};
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+}; */
+export default connect(null, null)(Home)

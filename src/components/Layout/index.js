@@ -11,8 +11,10 @@ import { StylesProvider } from "@material-ui/core/styles"
 const Layout = ({ children }) => {
     useEffect(() => {
         window.scrollTo(0, 0);
+        window.history.scrollRestoration = 'manual';
 
-    }, []);
+    }, [])
+
     const { i18n } = useTranslation();
     document.body.dir = i18n.dir();
     return (

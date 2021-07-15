@@ -20,6 +20,7 @@ const ServiceCard = ({ service, index }) => {
     const { t, i18n } = useTranslation();
    
      return (
+         <div> 
         <Zoom style={{ transitionDelay: `${1 * index}0ms` }} in={true}>
             <Paper style={{ padding: "20px 10px", margin: '0px 0px', background: "transparent" }} elevation={0} >
                 <Grid >
@@ -69,6 +70,7 @@ const ServiceCard = ({ service, index }) => {
                 </Grid>
             </Paper>
         </Zoom>
+        </div>
     );
 }
 export default ServiceCard
