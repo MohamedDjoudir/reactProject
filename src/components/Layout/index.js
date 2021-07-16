@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
     const { i18n } = useTranslation();
     document.body.dir = i18n.dir();
     return (
-        <div >
+        < >
             <StylesProvider injectFirst >
                 <ThemeProvider theme={theme} >
                     <Header />
@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
                     </div>
                 </ThemeProvider>
             </StylesProvider>
-        </div>
+        </>
     )
 }
 export default Layout

@@ -8,96 +8,96 @@ import ListItemText from '@material-ui/core/ListItemText';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import Avatar from '@material-ui/core/Avatar';
 // mui
-import classes from './BayerFreelancer.module.scss'
+import styles from './BayerFreelancer.module.scss'
  const BayerFreelancer = ({ categories }) => {
     const { t} = useTranslation();
     //styling
      
      return (
         <>
-            <div className={classes.bayerFreelancerWrapper2}>
-                <div className={classes.bayerFreelancerWrapper} >
+            <div className={styles.bayerFreelancerWrapper2}>
+                <div className={styles.bayerFreelancerWrapper} >
                     {/* bayer */}
                     <div >
-                        <div className={classes.features}>
-                            <ListItem className={classes.ListItem}>
+                        <div className={styles.features}>
+                            <ListItem className={styles.ListItem}>
                                 <ListItemAvatar>
                                     <Avatar style={{ background: "transparent" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
                                     </Avatar>
                                 </ListItemAvatar>
                                 <ListItemText
-                                    primary={<div className={classes.featuresText}>{t('dedicated')}</div>}
+                                    primary={<div className={styles.featuresText}>{t('dedicated')}</div>}
                                 />
                             </ListItem>
-                            <ListItem className={classes.ListItem}>
+                            <ListItem className={styles.ListItem}>
                                 <ListItemAvatar>
                                     <Avatar style={{ background: "transparent" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
                                     </Avatar>
                                 </ListItemAvatar>
                                 <ListItemText
-                                    primary={<div className={classes.featuresText}>{t('payment')}</div>}
+                                    primary={<div className={styles.featuresText}>{t('payment')}</div>}
                                 />
                             </ListItem>
-                            <ListItem className={classes.ListItem}>
+                            <ListItem className={styles.ListItem}>
                                 <ListItemAvatar>
                                     <Avatar style={{ background: "transparent" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
                                     </Avatar>
                                 </ListItemAvatar>
-                                <ListItemText className={classes.featuresText}
-                                    primary={<div className={classes.featuresText}>{t('get_maximum_value')}</div>}
+                                <ListItemText className={styles.featuresText}
+                                    primary={<div className={styles.featuresText}>{t('get_maximum_value')}</div>}
                                 />
                             </ListItem>
-                            <ListItem className={classes.ListItem}>
+                            <ListItem className={styles.ListItem}>
                                 <ListItemAvatar>
                                     <Avatar style={{ background: "transparent" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
                                     </Avatar>
                                 </ListItemAvatar>
                                 <ListItemText
-                                    primary={<div className={classes.featuresText}>{t('work_with_your_budget')}</div>}
+                                    primary={<div className={styles.featuresText}>{t('work_with_your_budget')}</div>}
                                 />
                             </ListItem>
                         </div>
                         <BtnDiscoverAllCat />
                     </div>
                     {/* image */}
-                    <div className={classes.sign_up_like_freelanser_imgWrapper}>
-                        <img src='https://www.forlanso.com/why-forlanso.jpeg' alt="sign_up_like_freelanser" className={classes.sign_up_like_freelanser} />
+                    <div className={styles.sign_up_like_freelanser_imgWrapper}>
+                        <img src='https://www.forlanso.com/why-forlanso.jpeg' alt="sign_up_like_freelanser" className={styles.sign_up_like_freelanser} />
                     </div>
                     {/* freelancer */}
                     <div>
-                        <div className={classes.features}>
-                            <ListItem className={classes.ListItem}>
+                        <div className={styles.features}>
+                            <ListItem className={styles.ListItem}>
                                 <ListItemAvatar>
                                     <Avatar style={{ background: "transparent" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
                                     </Avatar>
                                 </ListItemAvatar>
                                 <ListItemText
-                                    primary={<div className={classes.featuresText}>{t('three_month_commission')}</div>}
+                                    primary={<div className={styles.featuresText}>{t('three_month_commission')}</div>}
                                 />
                             </ListItem>
-                            <ListItem className={classes.ListItem}>
+                            <ListItem className={styles.ListItem}>
                                 <ListItemAvatar>
                                     <Avatar style={{ background: "transparent" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
                                     </Avatar>
                                 </ListItemAvatar>
                                 <ListItemText
-                                    primary={<div className={classes.featuresText}>{t('three_month_no_money')}</div>}
+                                    primary={<div className={styles.featuresText}>{t('three_month_no_money')}</div>}
                                 />
                             </ListItem>
-                            <ListItem className={classes.ListItem}>
+                            <ListItem className={styles.ListItem}>
                                 <ListItemAvatar>
                                     <Avatar style={{ background: "transparent" }}>
                                         <CheckCircleIcon style={{ fill: "#65c042" }} />
                                     </Avatar>
                                 </ListItemAvatar>
-                                <ListItemText className={classes.featuresText}
-                                    primary={<div className={classes.featuresText}>{t('mission_you_choose_from')}</div>}
+                                <ListItemText className={styles.featuresText}
+                                    primary={<div className={styles.featuresText}>{t('mission_you_choose_from')}</div>}
                                 />
                             </ListItem>
                         </div>

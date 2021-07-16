@@ -12,13 +12,14 @@ import HowItIsWork from './components/HowItIsWork'
 import Services from './components/Services'
 import MeetFreelancers from './components/MeetFreelancers'
 import FindTheRightPerson from './components/FindTheRightPers'
-
+import Loader from '../../components/Loader';
 // M_UI component s
 const Home = () => {
     // componnet states
     const [categories, setCategories] = useState(null)
     const [services, setServices] = useState(null)
     const [freelancers, setFreelancers] = useState(null)
+    const [loading, setLoading] = useState(true)
 
 
     // componnet did mount
@@ -34,22 +35,25 @@ const Home = () => {
             // get freelancer 
             const res3 = await server_api.get(`freelancer`, { params: { rows: 3 } })
             setFreelancers(res3.data.data)
+            setLoading(false)
         }
         fetchData()
     }, [])
     // language
     return (
         <Layout>
+            {loading && <Loader />}
             <Seo title='Forlanso' />
-            <TopSection />
-            <Slider categories={categories} />
-            <BtnDiscoverAllCat />
-            <BayerFreelancer />
-            <HowItIsWork />
-            <Services services={services} />
-            <BtnDiscoverAllServ />
-            <MeetFreelancers freelancers={freelancers} />
-            <FindTheRightPerson />
+            {!loading && <><TopSection />
+                <Slider categories={categories} />
+                <BtnDiscoverAllCat />
+                <BayerFreelancer />
+                <HowItIsWork />
+                <Services services={services} />
+                <BtnDiscoverAllServ />
+                <MeetFreelancers freelancers={freelancers} />
+                <FindTheRightPerson />
+            </>}
         </Layout >
     )
 }

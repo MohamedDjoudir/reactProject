@@ -1,0 +1,36 @@
+.LoaderWrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5252424222;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fcfcfc;
+    opacity: 0;
+    animation: fade 200ms ease-in-out forwards;
+    @keyframes fade {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+}
+.LoaderIcon {
+    height: calc(60px + 10vw);
+    width: calc(60px + 10vw);
+    background-color: transparent;
+}
+.LoaderIcon2 {
+    transform: translateY(-80px);
+    height: calc(60px + 10vw);
+    width: calc(60px + 10vw);
+    @media (max-width: 800px) {
+        transform: translateY(-40px);
+    }
+}

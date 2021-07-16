@@ -19,7 +19,7 @@ export default function Header() {
         return i18n.language !== "ar" ? i18n.changeLanguage('ar') : i18n.changeLanguage('en');
     }
     return (
-        <div sx={{ flexGrow: 1 }}>
+        <div>
             <AppBar className={classes.AppBar} position="fixed">
                 <Toolbar className={classes.Toolbar}>
                     <div sx={{ flexGrow: 1 }} className={classes.logoWrapper}>

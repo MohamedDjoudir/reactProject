@@ -12,8 +12,9 @@ const AppRouter = () => {
   return (
     <>
       <I18nextProvider i18n={i18n}>
+        
            <Switch>
-            <Route exact path={`/:localeCode(en|ar)?${'/'}`} component={HomePage} />
+            <Route exact path={`/`} component={HomePage} />
             <Route exact path='/page2' component={Page2} />
             <Route>
               <div> 404 not found</div>

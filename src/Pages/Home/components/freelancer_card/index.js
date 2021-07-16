@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import Grid from '@material-ui/core/Grid';
 import Zoom from '@material-ui/core/Zoom';
 import Paper from '@material-ui/core/Paper';
- import classes from './freelancer_card.module.scss'
+ import styles from './freelancer_card.module.scss'
 
 const FreelancerCard = ({ freelancer, index }) => {
     // language
@@ -25,24 +25,24 @@ const FreelancerCard = ({ freelancer, index }) => {
                         margin: "13px auto"
                     }}>
                         <CardActionArea>
-                            <img className={classes.Avatar}
+                            <img className={styles.Avatar}
                                 src={freelancer.profile_image}
-                                alt={classes.freelancer_name}
+                                alt={styles.freelancer_name}
                             />
                         </CardActionArea>
-                        <CardContent className={classes.CardContent}>
-                            <Typography className={classes.freelancer_name} variant="h4" component="div">
+                        <CardContent className={styles.CardContent}>
+                            <Typography className={styles.freelancer_name} variant="h4" component="div">
                                 {freelancer.first_name_en}  {freelancer.last_name_en}
                             </Typography>
-                            <Typography className={classes.freelancer_experience} variant="h6" component="div">
+                            <Typography className={styles.freelancer_experience} variant="h6" component="div">
                                 {freelancer.provider_information && freelancer.provider_information.experience}
                             </Typography>
-                            <Typography className={classes.freelancer_about} variant="h6" component="div">
+                            <Typography className={styles.freelancer_about} variant="h6" component="div">
                                 <div dangerouslySetInnerHTML={{ __html: i18n.language === 'ar' ? freelancer.provider_information['about_ar'] : freelancer.provider_information['about_en'] }} />
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            <Button size="small" color="primary" fullWidth className={classes.ViewBtn}>
+                            <Button size="small" color="primary" fullWidth className={styles.ViewBtn}>
                                 {t('view')}
                             </Button>
                         </CardActions>

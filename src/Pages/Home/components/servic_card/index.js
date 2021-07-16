@@ -13,7 +13,7 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
 import Divider from '@material-ui/core/Divider';
  import { FaStar } from 'react-icons/fa';
-import classes from './servic_card.module.scss'
+import styles from './servic_card.module.scss'
 
 const ServiceCard = ({ service, index }) => {
     // language
@@ -33,21 +33,21 @@ const ServiceCard = ({ service, index }) => {
                                 src={(service.files && service.files[0]) && service.files[0].path}
                                 title={i18n.language === 'ar' ? service['name_' + i18n.language] : service['name_en']}
                             />
-                            <CardContent className={classes.CardContent}>
-                                <ListItem className={classes.paddingZero}>
+                            <CardContent className={styles.CardContent}>
+                                <ListItem className={styles.paddingZero}>
                                     <ListItemAvatar>
-                                        <Avatar src={(service.user && service.user.profile_image) && service.user.profile_image} className={classes.howItWorkItemIcon} />
+                                        <Avatar src={(service.user && service.user.profile_image) && service.user.profile_image} className={styles.howItWorkItemIcon} />
                                     </ListItemAvatar>
-                                    <div className={classes.user_name}>
-                                        <h1 className={classes.user_name}>{(service.user && service.user.first_name_en) && service.user.first_name_en + ' ' + service.user.last_name_en}</h1>
-                                        <div className={classes.user_name_job} >{(service.user && service.user.provider_information) && service.user.provider_information.experience}</div>
+                                    <div className={styles.user_name}>
+                                        <h1 className={styles.user_name}>{(service.user && service.user.first_name_en) && service.user.first_name_en + ' ' + service.user.last_name_en}</h1>
+                                        <div className={styles.user_name_job} >{(service.user && service.user.provider_information) && service.user.provider_information.experience}</div>
                                     </div>
                                 </ListItem>
-                                <Typography className={classes.jobName} gutterBottom variant="h5" component="div">
+                                <Typography className={styles.jobName} gutterBottom variant="h5" component="div">
                                     {i18n.language === 'ar' ? service['name_' + i18n.language] : service['name_en']}
                                 </Typography>
-                                <div className={classes.soldbar}>
-                                    <div className={classes.rating}>
+                                <div className={styles.soldbar}>
+                                    <div className={styles.rating}>
                                         <div>
                                             <FaStar /> {service.rating && service.rating}
                                         </div>
@@ -62,7 +62,7 @@ const ServiceCard = ({ service, index }) => {
                             </CardContent>
                         </CardActionArea>
                         <CardActions>
-                            <Button size="small" color="primary" fullWidth className={classes.ViewBtn}>
+                            <Button size="small" color="primary" fullWidth className={styles.ViewBtn}>
                                 {t('view')}
                             </Button>
                         </CardActions>

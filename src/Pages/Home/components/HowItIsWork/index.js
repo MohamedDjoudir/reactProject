@@ -9,52 +9,52 @@ import { useTranslation } from 'react-i18next';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import Avatar from '@material-ui/core/Avatar';
-import classes from './HowItIsWork.module.scss'
+import styles from './HowItIsWork.module.scss'
  
 const HowItIsWork = ({ categories }) => {
     const { t } = useTranslation();
      
      return (
         <>
-            <div className={classes.howItWorkWrapper} >
-                <div className={classes.howItWorkItemTitle}>
+            <div className={styles.howItWorkWrapper} >
+                <div className={styles.howItWorkItemTitle}>
                     {t('how_it_work')}
                 </div>
-                <div className={classes.howItWorkItemWraper}>
-                    <ListItem className={classes.howItWorkItemWrapper}>
+                <div className={styles.howItWorkItemWraper}>
+                    <ListItem className={styles.howItWorkItemWrapper}>
                         <ListItemAvatar>
-                            <Avatar src={searchIcon} className={classes.howItWorkItemIcon} />
+                            <Avatar src={searchIcon} className={styles.howItWorkItemIcon} />
                         </ListItemAvatar>
                         <div>
-                            <h1 className={classes.featuresText}>{t('find_the')}</h1>
-                            <div className={classes.featuresTextSec}>{t('find_the_desc')}</div>
+                            <h1 className={styles.featuresText}>{t('find_the')}</h1>
+                            <div className={styles.featuresTextSec}>{t('find_the_desc')}</div>
                         </div>
                     </ListItem>
-                    <ListItem className={classes.howItWorkItemWrapper}>
+                    <ListItem className={styles.howItWorkItemWrapper}>
                         <ListItemAvatar>
-                            <Avatar src={bag} className={classes.howItWorkItemIcon} />
+                            <Avatar src={bag} className={styles.howItWorkItemIcon} />
                         </ListItemAvatar>
                         <div>
-                            <h1 className={classes.featuresText}>{t('order')}</h1>
-                            <div className={classes.featuresTextSec}>{t('order_desc')}</div>
+                            <h1 className={styles.featuresText}>{t('order')}</h1>
+                            <div className={styles.featuresTextSec}>{t('order_desc')}</div>
                         </div>
                     </ListItem>
-                    <ListItem className={classes.howItWorkItemWrapper}>
+                    <ListItem className={styles.howItWorkItemWrapper}>
                         <ListItemAvatar>
-                            <Avatar src={protection} className={classes.howItWorkItemIcon} />
+                            <Avatar src={protection} className={styles.howItWorkItemIcon} />
                         </ListItemAvatar>
-                        <div className={classes.featuresText}>
-                            <h1 className={classes.featuresText}>{t('money')}</h1>
-                            <div className={classes.featuresTextSec} >{t('money_desc')}</div>
+                        <div className={styles.featuresText}>
+                            <h1 className={styles.featuresText}>{t('money')}</h1>
+                            <div className={styles.featuresTextSec} >{t('money_desc')}</div>
                         </div>
                     </ListItem>
-                    <ListItem className={classes.howItWorkItemWrapper}>
+                    <ListItem className={styles.howItWorkItemWrapper}>
                         <ListItemAvatar>
-                            <Avatar src={shiping} className={classes.howItWorkItemIcon} />
+                            <Avatar src={shiping} className={styles.howItWorkItemIcon} />
                         </ListItemAvatar>
-                        <div className={classes.featuresText}>
-                            <h1 className={classes.featuresText}>{t('receive')}</h1>
-                            <div className={classes.featuresTextSec} >{t('receive_desc')}</div>
+                        <div className={styles.featuresText}>
+                            <h1 className={styles.featuresText}>{t('receive')}</h1>
+                            <div className={styles.featuresTextSec} >{t('receive_desc')}</div>
                         </div>
                     </ListItem>
                 </div>
