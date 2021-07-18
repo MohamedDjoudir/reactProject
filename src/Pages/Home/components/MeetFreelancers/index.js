@@ -20,9 +20,13 @@ const MeetFreelancers = ({ freelancers }) => {
                     <Grid className={styles.gridWrapper} >
                         <Grid item sm={12}>
                             <Grid container justifyContent="center" spacing={2}>
-                                {freelancers && freelancers.map((freelancer, i) => <div key={"service" + i} className={styles.FreelancerCardWrapprer}>
-                                    <FreeLancerCard freelancer={freelancer} index={i} />
-                                </div>)}
+                                {freelancers && [freelancers[0], freelancers[1], freelancers[2]].map((freelancer, i) =>
+                                    <div key={"service" + i} className={styles.FreelancerCardWrapprer}>
+                                        <FreeLancerCard freelancer={freelancer} index={i} />
+                                    </div>)}
+                                {freelancers && <div className={styles.showHide}>
+                                    <FreeLancerCard freelancer={freelancers[3]} index={"52dz6"} />
+                                </div>}
                             </Grid>
                         </Grid>
                     </Grid>

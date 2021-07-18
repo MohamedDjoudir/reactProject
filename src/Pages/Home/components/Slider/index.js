@@ -1,25 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // mui
- // animation
+// animation
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import styles from './Slider.module.scss'
 
 import SwiperCore, { Autoplay, Navigation } from 'swiper';
- // swiiper api 
- SwiperCore.use([Autoplay, Navigation]);
+// swiiper api 
+SwiperCore.use([Autoplay, Navigation]);
 const Slider = ({ categories }) => {
     const { t, i18n } = useTranslation();
      
-     return (
+
+    return (
         <>
             <div className={styles.sliderWrapper}>
                 <div className={styles.sliderTitleWrapper}>
                     <h2 className={styles.categories}>{t('categories')}</h2>
                 </div>
+                 
                 <div className={styles.SwiperWrapper}>
                     <Swiper
                         spaceBetween={40}
@@ -55,7 +57,7 @@ const Slider = ({ categories }) => {
                             1024: {
                                 slidesPerView: 4,
                                 spaceBetween: 10,
-                                
+
 
                             },
                             1500: {

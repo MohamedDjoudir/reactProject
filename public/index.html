@@ -48,17 +48,19 @@
     .LoaderIcon2 {
       transform: translateY(-80px);
       height: calc(60px + 10vw);
-      width: calc(60px + 10vw);
-
-      @media (max-width: 800px) {
+      width: calc(60px + 10vw);      
+    }
+    @media (max-width: 800px) {
+      .LoaderIcon2{
         transform: translateY(-40px);
       }
-    }
+      }
+    
   </style>
 </head>
 
 <body>
-  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <noscript>You need to enable JavaScript to run this app.</noscript>  
   <div id="root">
     <div id="loader" class="LoaderWrapper">
       <img src="./spiner.svg" alt="" class="LoaderIcon" />

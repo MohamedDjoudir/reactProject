@@ -2,13 +2,13 @@ import React from 'react'
 import { useTranslation } from 'react-i18next';
 // importing assets 
 // mui
-import Button from '@material-ui/core/Button';
- import styles from './FindTheRightPers.module.scss'
+import ContainedBTN from '../../../../components/Shared/Contained_BTN';
+import styles from './FindTheRightPers.module.scss'
 
 const FindTheRightPerson = ({ services }) => {
     const { t } = useTranslation();
-     
-     return (
+
+    return (
         <>
             <div className={styles.Find_the_right_person}>
                 <div style={{ position: "relative" }}>
@@ -16,13 +16,7 @@ const FindTheRightPerson = ({ services }) => {
                         <div className={styles.Find_the_right_person_text}>
                             {t("Find_the_right_person")}
                         </div>
-                        <div>
-                            <div style={{ textAlign: "center" }}>
-                                <Button variant='contained' className={styles.viewBTN} style={{ fontSize: "25px" }} color="primary">
-                                    <span className={styles.discovertext}>{t('discover_all_services')}</span>
-                                </Button>
-                            </div >
-                        </div>
+                        <ContainedBTN textID={'GetStarted'} />
                     </div>
                     <div className={styles.green_circle_wrapper}>
                         <div className={styles.green_circle}> </div>

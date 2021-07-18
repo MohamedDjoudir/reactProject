@@ -5,21 +5,18 @@ import { connect } from 'react-redux';
 import Seo from '../../components/Seo'
 import TopSection from './components/TopSection'
 import Slider from './components/Slider'
-import BtnDiscoverAllCat from './components/Btn_DiscoverAllCat'
-import BtnDiscoverAllServ from './components/Btn_DiscoverAllServ'
-import BayerFreelancer from './components/BayerFreelancer'
+import OutlinedBTN from '../../components/Shared/Outlined_BTN'
+import CheckList from './components/Features'
 import HowItIsWork from './components/HowItIsWork'
 import Services from './components/Services'
 import MeetFreelancers from './components/MeetFreelancers'
 import FindTheRightPerson from './components/FindTheRightPers'
-import Loader from '../../components/Loader';
 // M_UI component s
 const Home = () => {
     // componnet states
     const [categories, setCategories] = useState(null)
     const [services, setServices] = useState(null)
     const [freelancers, setFreelancers] = useState(null)
-    const [loading, setLoading] = useState(true)
 
 
     // componnet did mount
@@ -33,27 +30,27 @@ const Home = () => {
             const res2 = await server_api.get(`/service/search`, { params: { rows: 8 } })
             setServices(res2.data.data)
             // get freelancer 
-            const res3 = await server_api.get(`freelancer`, { params: { rows: 3 } })
+            const res3 = await server_api.get(`freelancer`, { params: { rows: 4 } })
             setFreelancers(res3.data.data)
-            setLoading(false)
         }
         fetchData()
     }, [])
     // language
+    console.log("fdef")
     return (
         <Layout>
-            {loading && <Loader />}
+
             <Seo title='Forlanso' />
-            {!loading && <><TopSection />
+            <><TopSection />
                 <Slider categories={categories} />
-                <BtnDiscoverAllCat />
-                <BayerFreelancer />
+                <OutlinedBTN textID={'discoverCate'} />
+                <CheckList />
                 <HowItIsWork />
                 <Services services={services} />
-                <BtnDiscoverAllServ />
+                <OutlinedBTN textID={'discover_all_services'} />
                 <MeetFreelancers freelancers={freelancers} />
                 <FindTheRightPerson />
-            </>}
+            </>
         </Layout >
     )
 }

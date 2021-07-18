@@ -1,29 +1,25 @@
 import React from 'react'
-import ServiceCard from "../servic_card";
+import Grid from '@material-ui/core/Grid';
 import { useTranslation } from 'react-i18next';
+import Card from "../../../../components/Shared/Card";
 // importing assets 
 // mui
-import Grid from '@material-ui/core/Grid';
- import styles from './Services.module.scss'
+import styles from './Services.module.scss'
 
 const HowItIsWork = ({ services }) => {
-    const { t} = useTranslation();
-     
-     
-     return (
+    const { t } = useTranslation();
+    return (
         <>
             <div className={styles.howItWorkItemTitle}>
                 {t('services')}
             </div>
             <div className={styles.servicesWrapper}>
-                <Grid className={styles.gtidWrapper} >
-                    <Grid item sm={12} xl={12}>
-                        <Grid container justifyContent="center" spacing={2}>
-                            {services && services.map((service, i) => <div key={"service" + i} className={styles.serviceCardWrapprer} >
-                                <ServiceCard service={service} index={i} />
-                            </div>)}
+                <Grid container justifyContent='center'  columns={{ xs: 4, sm: 8, md: 4 }} className={styles.gridWrapper}>
+                    {services && services.map((service, i) => (
+                        <Grid  justifyContent='center' item xs={12} sm={6} md={4} lg={3} xl={3} key={i+"card"}>
+                            <Card cardData={service} index={i} buttonTextID={'view'} />
                         </Grid>
-                    </Grid>
+                    ))}
                 </Grid>
             </div>
         </>

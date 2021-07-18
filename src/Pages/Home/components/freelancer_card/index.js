@@ -7,15 +7,15 @@ import { useTranslation } from 'react-i18next';
 import Grid from '@material-ui/core/Grid';
 import Zoom from '@material-ui/core/Zoom';
 import Paper from '@material-ui/core/Paper';
- import styles from './freelancer_card.module.scss'
+import styles from './freelancer_card.module.scss'
 
 const FreelancerCard = ({ freelancer, index }) => {
     // language
     const { t, i18n } = useTranslation();
-     
-     return (
+
+    return (
         <Zoom style={{ transitionDelay: `${1 * index}0ms` }} in={true}>
-            <Paper style={{ padding: "20px 10px", margin: '0px 20px', background: "transparent" }} elevation={0} >
+            <Paper className={styles.cardWrapper} elevation={0} >
                 <Grid >
                     <Card sx={{ maxWidth: 345 }} style={{
                         boxShadow: "0 0 10px rgba(150,150,150,0.5)",
@@ -42,14 +42,15 @@ const FreelancerCard = ({ freelancer, index }) => {
                             </Typography>
                         </CardContent>
                         <CardActions>
-                            <Button size="small" color="primary" fullWidth className={styles.ViewBtn}>
-                                {t('view')}
+                            <Button color="primary" fullWidth className={styles.ViewBtn}>
+                                <span className={styles.ViewBtnFont}> {t('viewProfile')}</span>
                             </Button>
                         </CardActions>
                     </Card>
                 </Grid>
             </Paper>
         </Zoom>
+
     );
 }
 export default FreelancerCard

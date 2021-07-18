@@ -22,15 +22,15 @@
     }
 }
 .LoaderIcon {
-    height: calc(60px + 10vw);
-    width: calc(60px + 10vw);
+    height: calc(60px + 5vw);
+    width: calc(60px + 5vw);
     background-color: transparent;
 }
 .LoaderIcon2 {
-    transform: translateY(-80px);
-    height: calc(60px + 10vw);
-    width: calc(60px + 10vw);
+    transform: translateY(-60px);
+    height: calc(60px + 5vw);
+    width: calc(60px + 5vw);
     @media (max-width: 800px) {
-        transform: translateY(-40px);
+        transform: translateY(-30px);
     }
 }

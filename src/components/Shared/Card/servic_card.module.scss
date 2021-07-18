@@ -1,8 +1,9 @@
 .user_name {
     font-size: 15px;
-    color: #303030;
+    color: #4d4d4f;
     font-family: "Almarai", sans-serif;
     line-height: 30px;
+    cursor: pointer;
     text-align: left;
     overflow: Hidden;
     font-weight: 400;
@@ -11,7 +12,7 @@
 }
 .user_name_job {
     font-size: 10px;
-    color: #303030;
+    color: #4d4d4f;
     font-family: "Almarai", sans-serif;
     text-align: left;
     overflow: Hidden;
@@ -32,11 +33,9 @@
     padding-right: 5px;
 }
 .jobName {
-    min-height: 70px;
-    max-height: 70px;
     padding-left: 10px;
     padding-right: 10px;
-    height: 70px;
+    height: 50px;
     overflow: hidden;
     font-size: 16px;
     font-family: "Cairo", sans-serif;
@@ -58,23 +57,63 @@
 .ViewBtn {
     background: #65c042;
     color: #fff;
-    margin-top: -10px;
     border-radius: 10px;
+    width: 90%;
+    margin: -10px auto 0 auto;
     font-family: "Cairo", sans-serif;
     padding-top: 10px;
     padding-bottom: 10px;
     &:hover {
         background: #92d878;
     }
+    @media (max-width: 1280px) {
+        width: 80%;
+    }
 }
+.cardWrapper {
+    padding: 20px 10px;
+    margin: 0px 0px;
+    background: transparent;
+}
+.CardBody {
+    box-shadow: 0 0 10px rgba(150, 150, 150, 0.5);
+    border-radius: 10px;
+}
+.CardBodyMedia {
+    height: 180px;
+    @media (max-width: 1280px) {
+        height: 150px;
+    }
+    @media (max-width: 600px) {
+        height: 200px;
+    }
+    @media (max-width: 600px) {
+        height: 200px;
+    }
+}
+.sold {
+    color: #b8b8b9;
+    margin: 0 20px;
+}
+.price {
+    color: #717172;
+}
+.ViewBtnFont {
+    font-family: "ExpletusSans", sans-serif;
+    font-size: 16px;
+    text-transform: none;
+}
+
 // rtl
 body[dir="rtl"] {
     .user_name_job {
         text-align: right;
     }
-    .user_name { 
+    .user_name {
         text-align: right;
     }
+    .ViewBtnFont {
+        font-family: "Ithra", sans-serif !important;
+        font-weight: 600;
+    }
 }
- 
-

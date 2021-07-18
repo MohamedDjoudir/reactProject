@@ -1,7 +1,7 @@
 .featuresText {
     font-size: 1.125rem;
-    color: #303030;
-    font-family: "Almarai", sans-serif;
+    color: #4D4D4F;
+    font-family: "Ithra", sans-serif;
     text-align: center;
     max-height: 360px;
     overflow: Hidden;
@@ -11,7 +11,7 @@
     }
 }
 .howItWorkItemWraper {
-    padding: 20px 0;
+    padding: 20px 80px;
     background: #e6f7fd;
     display: flex;
     @media (max-width: 600px) {
@@ -20,15 +20,17 @@
     }
 }
 .howItWorkWrapper {
+    margin: 1rem auto;
     background: #e6f7fd;
     padding: 20px 0;
 }
 .howItWorkItemTitle {
     width: max-content;
     margin: 20px auto;
-    font-family: "Almarai", sans-serif;
+    font-family: "Ithra", sans-serif;
+    font-weight: 600;
     font-size: 30px;
-    color: #303030;
+    color: #4D4D4F;
     @media (max-width: 600px) {
         font-size: 23px;
         //textAlign: i18n.language === 'ar' ? "right" : "left",
@@ -50,7 +52,7 @@
 }
 
 .featuresTextSec {
-    font-family: "Almarai", sans-serif;
+    font-family: "Ithra", sans-serif;
     line-height: 27px;
     text-align: center;
     font-size: 16px;

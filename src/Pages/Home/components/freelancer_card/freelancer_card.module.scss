@@ -11,33 +11,66 @@
 .freelancer_name {
     text-align: center;
     margin: 60px auto 0;
-    font-family: "Cairo", sans-serif;
+    font-family: "ExpletusSans", sans-serif;
     font-size: 25px;
+    @media (max-width: 1280px) {
+        font-size: 18px;
+    }
 }
 .freelancer_experience {
     color: #b8b8b9;
     text-align: center;
-    font-family: "Cairo", sans-serif;
+    font-family: "ExpletusSans", sans-serif;
     font-size: 12px;
 }
 .freelancer_about {
     color: #212529;
-    font-family: "Cairo", sans-serif;
+    font-family: "ExpletusSans", sans-serif;
     font-size: 18px;
     margin: 23px auto 0;
     height: 120px;
     overflow: hidden;
     line-height: 19px;
+    @media (max-width: 1280px) {
+        font-size: 14px !important;
+    }
 }
 .ViewBtn {
     background: #65c042;
     color: #fff;
     margin-top: -10px;
     border-radius: 10px;
-    font-family: "Cairo", sans-serif;
     padding-top: 10px;
     padding-bottom: 10px;
     &:hover {
         background: #92d878;
+    }
+}
+.ViewBtnFont {
+    font-family: "ExpletusSans", sans-serif;
+    font-size: 16px;
+    text-transform: none;
+
+}
+.cardWrapper {
+    padding: 20px 10px;
+    margin: 0px 20px;
+    background: transparent;
+}
+
+body[dir="rtl"] {
+    .freelancer_name {
+        font-family: "Ithra", sans-serif !important;
+    }
+    .freelancer_experience {
+        font-family: "Ithra", sans-serif !important;
+        font-weight: 600;
+    }
+    .freelancer_about {
+        font-family: "Ithra", sans-serif !important;
+    }
+    .ViewBtnFont {
+        font-family: "Ithra", sans-serif !important;
+        font-weight: 600;
     }
 }

@@ -5,25 +5,26 @@
     box-shadow: none;
     height: 80px;
     z-index: 6565;
+    
 }
 .Toolbar {
     height: 80px;
     width: 100%;
     background: #f6fcfe;
-
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 35px 0 25px !important;
+    padding: 0 35px 0 35px !important;
 }
 .grow {
     flex-grow: 1;
 }
 .logoWrapper {
-    width: 193px;
+    width: 140px;
     cursor: pointer;
 }
 .logo {
-    width: 193px;
+    margin-top: 5px;
+    width: 140px;
 }
 .AppBarSpace {
     height: 80px;
@@ -31,12 +32,17 @@
 .link {
     color: #4d4d4f;
     text-decoration-line: none;
-    font-family: Almarai, sans-serif;
+    font-family: "Ithra", sans-serif;
+}
+.language {
+    color: #4d4d4f;
+    text-decoration-line: none;
+    font-family: "Ithra", sans-serif !important;
 }
 .link2 {
     color: #4d4d4f;
     text-decoration-line: none;
-    font-family: Almarai, sans-serif;
+    font-family: "Ithra", sans-serif;
 }
 .btnVide {
     opacity: 0;
@@ -123,12 +129,23 @@
 
 // rtl
 body[dir="rtl"] {
+    .language {
+        font-family: "ExpletusSans", sans-serif !important;
+    }
     .menuBG {
-         right: 200%;
+        right: 200%;
     }
     .menu {
- 
         right: -200%;
     }
+    .link {
+        color: #4d4d4f;
+        text-decoration-line: none;
+        font-family: "ExpletusSans", sans-serif;
+    }
+    .link2 {
+        color: #4d4d4f;
+        text-decoration-line: none;
+        font-weight: 600;
+    }
 }
- 

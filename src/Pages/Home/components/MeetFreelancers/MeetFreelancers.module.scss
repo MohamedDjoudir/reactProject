@@ -1,17 +1,49 @@
 .servicesWrapper {
     width: 100%;
     max-width: 1400px;
-     overflow: hidden;
+    overflow: hidden;
 }
 .FreelancerCardWrapprer {
-    min-width: 350px;
-    width: 350px;
-    max-width: 350px;
-    @media (max-width: 900px) {
-        margin: 20px auto;
-        min-width: 350px;
-        width: 350px;
-     }
+    transition: all 400ms;
+
+    min-width: 380px;
+    max-width: 400px;
+    @media (max-width: 1284px) {
+        margin: 10px 0 0;
+        min-width: 380px;
+        max-width: 400px;
+    }
+    @media (max-width: 860px) {
+        margin: 10px 0 0;
+        min-width: 320px;
+        max-width: 320px;
+    }
+    @media (max-width: 650px) {
+        margin: 10px 0 0;
+        min-width: 320px;
+        max-width: 90%;
+    }
+}
+.showHide {
+    display: none;
+    min-width: 380px;
+    max-width: 400px;
+    transition: all 400ms;
+    @media (max-width: 1285px) {
+        min-width: 380px;
+        max-width: 400px;
+        margin: 10px 0 0;
+        display: block;
+    }
+    @media (max-width: 860px) {
+        margin: 10px 0 0;
+        min-width: 320px;
+        max-width: 320px;
+    }
+    @media (max-width: 650px) {
+        display: none;
+
+    }
 }
 .gridWrapper {
     padding: 20px 50px;
@@ -30,13 +62,22 @@
     }
 }
 .howItWorkItemTitle {
-    margin: 20px auto;
+    margin: 8rem auto 5rem;
     text-align: center;
     line-height: 35px;
-    font-family: "Almarai", sans-serif;
+    font-family: "ExpletusSans", sans-serif;
     font-size: 30px;
-    color: #303030;
+    color: #4d4d4f;
     @media (max-width: 600px) {
         font-size: 23px;
+        margin: 3rem auto 3rem;
+
+    }
+}
+
+body[dir="rtl"] {
+    .howItWorkItemTitle {
+        font-family: "Ithra", sans-serif;
+        font-weight: 600;
     }
 }

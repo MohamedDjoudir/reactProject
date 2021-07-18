@@ -2,21 +2,24 @@
     font-size: 27px;
     width: max-content;
     margin: 0 auto;
-    font-family: "Almarai", sans-serif;
-    color: #303030;
-    font-weight: 400;
-}
+    font-family: "IthraBold", sans-serif;
+    color: #4D4D4F;
+ }
 .sliderTitleWrapper {
     margin: 2rem auto;
     background: white;
 }
 .sliderWrapper {
+    margin-top: 70px;
     background: white;
- }
+    @media (max-width: 900px) {
+        margin-top: 50px;
+    }
+}
 .discover {
     text-transform: none;
     padding: 5px 2rem;
-    font-family: "Almarai", sans-serif;
+    font-family: "Ithra", sans-serif;
     margin: 2rem auto;
 }
 .SwiperWrapper {
@@ -34,7 +37,8 @@
 .textInImg {
     font-size: 24px;
     color: #fff !important;
-    font-family: "Cairo", sans-serif !important;
+    font-family: "ExpletusSans", sans-serif ;
+
     //white-space: nowrap;
     position: absolute;
     top: 50%;
@@ -45,7 +49,7 @@
     @media (max-width: 900px) {
         white-space: normal;
         font-size: 11px;
-        font-family: "Cairo", sans-serif !important;
+        font-family: "ExpletusSans", sans-serif ;
         color: #fff !important;
         position: absolute;
         top: 50%;
@@ -63,8 +67,8 @@
     right: 0;
     width: 21vw;
     height: 21vw;
-    max-width: 310px;
-    max-height: 310px;
+    max-width: 280px;
+    max-height: 280px;
     transition: 0.25s ease;
     background: rgba(14, 1, 1, 0.5);
     border-radius: 50%;
@@ -74,8 +78,8 @@
     display: inline-block;
     width: 21vw;
     height: 21vw;
-    max-width: 310px;
-    max-height: 310px;
+    max-width: 280px;
+    max-height: 280px;
 }
 .img_wrapper {
     position: relative;
@@ -83,3 +87,10 @@
     height: 100%;
     object-fit: contain;
 }
+body[dir="rtl"] {
+  
+    .textInImg {
+        font-family: "Ithra", sans-serif ;
+
+    }
+  }

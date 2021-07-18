@@ -1,12 +1,13 @@
 .servicesWrapper {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
      max-width: 1400px;
     overflow: hidden;
 }
 .serviceCardWrapprer {
-    min-width: 25%;
-    width: 25%;
-    max-width: 25%;
+    min-width: 22%;
+    width: 22%;
+    max-width: 22%;
     @media (max-width: 1280px) {
         width: 40%;
         min-width: 40%;
@@ -31,12 +32,52 @@
 }
 .howItWorkItemTitle {
     width: max-content;
-    margin: 3rem auto 0rem;
-    font-family: "Almarai", sans-serif;
-    font-size: 30px;
-    color: #303030;
+    margin: 8rem auto -2rem;
+    font-family: "ExpletusSans", sans-serif;
+     font-size: 30px;
+    color: #4D4D4F;
     @media (max-width: 600px) {
         font-size: 23px;
         //textAlign: i18n.language === 'ar' ? "right" : "left",
     }
 }
+
+body[dir="rtl"] {
+    .howItWorkItemTitle {
+        font-family: "Ithra", sans-serif ;
+        font-weight: 600;
+    }
+}
+.servicesWrapper {
+    width: 100%;
+     max-width: 1400px;
+    overflow: hidden;
+}
+.serviceCardWrapprer {
+    min-width: 25%;
+    width: 25%;
+    max-width: 25%;
+    @media (max-width: 1280px) {
+        width: 40%;
+        min-width: 40%;
+    }
+    @media (max-width: 600px) {
+        width: 95vw;
+        min-width: 95vw;
+    }
+}
+.gridWrapper {
+    padding: 20px 50px;
+    position: relative;
+    border-radius: 10px;
+    margin: 35px auto 0 auto;
+    width: 100%;
+    max-width: 1400px;
+    background-color: #fff;
+    @media (max-width: 900px) {
+        padding: 10px;
+        border-radius: 7px;
+        margin: 35px auto 0 auto;
+    }
+}
+ 

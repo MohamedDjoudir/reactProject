@@ -3,6 +3,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+
+@font-face {
+  font-family: "Ithra";
+  src: local("Ithra"), url(./fonts/Ithra.woff) format("woff");
+}
+@font-face {
+  font-family: "ExpletusSans";
+  src: local("ExpletusSans"), url(./fonts/ExpletusSans.woff) format("woff");
+}
+@font-face {
+  font-family: "IthraBold";
+  src: local("IthraBold"), url(./fonts/IthraBold.woff) format("woff");
+}
 *,
 :after,
 :before {
@@ -13,15 +26,14 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   background: #fff;
- 
- }
+}
 body {
   margin: 0;
   padding: 0;
   background: #fff;
-  }
+  font-family: "ExpletusSans", sans-serif;
+}
 
- 
 /* **
 * swipper
 */
@@ -31,12 +43,22 @@ body {
   height: 3vw !important;
   border-radius: 50%;
   border: none;
-  background: #fff;
+  background: rgb(255, 255, 255);
   text-align: center;
-  z-index: 56652;
   box-shadow: 2px 1px 25px -3px rgba(0, 0, 0, 0.57);
   -webkit-box-shadow: 2px 1px 25px -3px rgba(0, 0, 0, 0.57);
   -moz-box-shadow: 2px 1px 25px -3px rgba(0, 0, 0, 0.57);
+  @media (max-width: 900px) {
+    display: none !important;
+  }
+}
+@media (min-width: 1270px) {
+  .swiper-button-prev {
+    transform: translateX(0vw);
+  }
+  .swiper-button-next {
+    transform: translateX(2vw);
+  }
 }
 .swiper-button-next:after,
 .swiper-button-prev:after,
@@ -59,22 +81,21 @@ body {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #0fb3f0;
+  background: #d6edfc;
   border-radius: 2px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #06cdff;
+  background: #b6d0e2;
 }
 ::selection {
   color: rgba(0, 0, 0, 0.712);
   background: #014b5898;
 }
- 
 
 /* **
  * mui
- */ 
+ */
 .Mui-selected div {
   background-color: rgba(7, 26, 197, 0) !important;
 }
@@ -89,10 +110,16 @@ body {
   padding-right: 14px !important;
 }
 
-
-@media only screen and (max-width: 900px) {
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none !important;
+body {
+  * {
+    font-family: "ExpletusSans", sans-serif !important;
   }
+}
+body[dir="rtl"] {
+  * {
+    font-family: "Ithra", sans-serif !important;
+  }
+}
+input:focus::placeholder {
+  color: transparent;
 }

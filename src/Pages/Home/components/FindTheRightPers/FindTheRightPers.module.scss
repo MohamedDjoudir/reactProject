@@ -85,19 +85,27 @@
  color: white;
  font-size: 30px;
  line-height: 38px;
- font-family: 'Almarai',sans-serif;
+ font-family: 'ExpletusSans',sans-serif;
+ font-weight: 600;
  position: relative;
  margin: 20px auto;
 }
-.viewBTN{
- background: #65c042;
- color: #fff;
- border-radius: 10px;
- font-family: 'Cairo',sans-serif;
- padding-top: 10px;
- padding-bottom: 10px;
- &:hover{
-     background: #92d878;
- }
+ 
+
+body[dir="rtl"] {
+    .Find_the_right_person_text {
+        font-family: "Ithra", sans-serif !important;
+     }
+    .viewBTN {
+        font-family: "Ithra", sans-serif !important;
+        font-weight: 600;
+    }
+    .freelancer_about {
+        font-family: "Ithra", sans-serif !important; 
+     }
+    .ViewBtnFont {
+        font-family: "Ithra", sans-serif !important;
+        font-weight: 600;
+    }
 }
  

@@ -1,0 +1,28 @@
+.sliderWrapper {
+    margin: 2rem auto;
+}
+.discover {
+    text-transform: none;
+    padding: 5px 2rem;
+    font-family: "Ithra", sans-serif;
+    margin: 2rem auto;
+    font-size: 25px;
+    transition: all 400ms;
+    &:hover {
+        background: #65c042;
+        color: white;
+    }
+}
+.discovertext {
+    font-size: 20px;
+    width: max-content;
+    margin: 0 auto;
+    font-family: "ExpletusSans", sans-serif;
+ 
+}
+body[dir="rtl"] {
+    .discovertext {
+        font-family: "Ithra", sans-serif !important;
+        font-weight: 600;
+    }
+}

@@ -22,28 +22,47 @@
 }
 .Treeitem {
     margin-top: 5px;
-    color: #303030;
+    color: #4D4D4F;
     background-color: transparent !important;
     white-space: nowrap;
     &:hover {
-        color: #0fb3f0;
+        color: #00AEEF;
         background-color: transparent !important;
         opacity: 1;
     }
 }
+.TreeitemNot {
+    margin-top: 2px;
+    color: #999898;
+    cursor: auto;
+    background-color: transparent !important;
+    white-space: nowrap;
+    &:hover {
+        color: #999898;
+        background-color: transparent !important;
+        opacity: 1;
+    }
+}
+.TreeitemNotFirst {
+    margin-top: 15px; 
+    cursor: auto;
+  
+}
 .TreeitemForn {
-    font-family: Almarai, sans-serif ;
+    font-family: "ExpletusSans", sans-serif;
+
     white-space: nowrap;
 }
 .label {
     font-size: 22px;
-    color: #303030;
-    border-bottom: 3px solid #0fb3f0;
+    color: #4D4D4F;
+    border-bottom: 3px solid #00AEEF;
     white-space: nowrap;
     width: 25px;
-    font-family: Almarai, sans-serif;
+    font-family: "ExpletusSans", sans-serif;
+
     @media (max-width: 900px) {
-        font-size: 25px;
+        font-size: 22px;
     }
 }
 .socialMediaWrapper {
@@ -133,4 +152,10 @@ body[dir="rtl"] {
      .TreeViewDesk{
        right: 60%,
      }
+     .TreeitemForn {
+        font-family: "Ithra", sans-serif;
+    }
+    .label {
+        font-family: "Ithra", sans-serif;
+    }
 }
